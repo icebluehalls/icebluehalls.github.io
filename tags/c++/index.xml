@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>C++ on IceBlueHalls</title><link>https://icebluehalls.github.io/tags/c++/</link><description>Recent content in C++ on IceBlueHalls</description><generator>Hugo -- gohugo.io</generator><language>ko-kr</language><lastBuildDate>Tue, 04 Oct 2022 02:35:04 +0900</lastBuildDate><atom:link href="https://icebluehalls.github.io/tags/c++/index.xml" rel="self" type="application/rss+xml"/><item><title>우분투에 최신버전 Cmake 다운받기</title><link>https://icebluehalls.github.io/p/how-to-download-cmake-in-ubuntu/</link><pubDate>Tue, 04 Oct 2022 02:35:04 +0900</pubDate><guid>https://icebluehalls.github.io/p/how-to-download-cmake-in-ubuntu/</guid><description>&lt;img src="https://icebluehalls.github.io/p/how-to-download-cmake-in-ubuntu/bootstrap_success.PNG" alt="Featured image of post 우분투에 최신버전 Cmake 다운받기" />&lt;p>우분투의 경우, 명령어로 cmake를 다운받으면 3.19가 다운 받아지며 그 이상의 버전은 다운이 불가능하다.&lt;/p>
+&lt;p>따라서 cmake 최신 버전을 다운받으려면 다음과 같이 알집 파일을 압축 해제해서 안에 있는 실행파일을 직접 실행시켜야 한다.&lt;/p>
+&lt;h2 id="cmake-홈페이지에-접속">Cmake 홈페이지에 접속&lt;/h2>
+&lt;p>링크 : &lt;a class="link" href="https://cmake.org/download/" target="_blank" rel="noopener"
+>https://cmake.org/download/&lt;/a>&lt;/p>
+&lt;h2 id="리눅스용-설치-파일의-링크를-복사">리눅스용 설치 파일의 링크를 복사&lt;/h2>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/how-to-download-cmake-in-ubuntu/download_zip.png"
+width="1126"
+height="588"
+srcset="https://icebluehalls.github.io/p/how-to-download-cmake-in-ubuntu/download_zip_huafc74bbef56ab5b5451531c76c7e526b_85755_480x0_resize_box_3.png 480w, https://icebluehalls.github.io/p/how-to-download-cmake-in-ubuntu/download_zip_huafc74bbef56ab5b5451531c76c7e526b_85755_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="191"
+data-flex-basis="459px"
+>&lt;/p>
+&lt;h2 id="우분투를-열어-다운받기-명령어-실행">우분투를 열어 다운받기 명령어 실행&lt;/h2>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/how-to-download-cmake-in-ubuntu/wget_cmake.PNG"
+width="979"
+height="512"
+srcset="https://icebluehalls.github.io/p/how-to-download-cmake-in-ubuntu/wget_cmake_hu0b821975fa1cb88dd6de481dd9b890eb_40123_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/how-to-download-cmake-in-ubuntu/wget_cmake_hu0b821975fa1cb88dd6de481dd9b890eb_40123_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="191"
+data-flex-basis="458px"
+>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">wget https://github.com/Kitware/CMake/releases/download/v3.24.2/cmake-3.24.2.tar.gz
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="다운받은-압축파일-압축-풀기">다운받은 압축파일 압축 풀기&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">tar -xvzf 해당파일.tar.gz
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;img src="https://icebluehalls.github.io/p/how-to-download-cmake-in-ubuntu/release_zip.PNG"
+width="979"
+height="512"
+srcset="https://icebluehalls.github.io/p/how-to-download-cmake-in-ubuntu/release_zip_hu23fce7e84a25d461f12f6a7e8bb6be0a_24907_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/how-to-download-cmake-in-ubuntu/release_zip_hu23fce7e84a25d461f12f6a7e8bb6be0a_24907_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="191"
+data-flex-basis="458px"
+>&lt;/p>
+&lt;p>압축이 풀리면 tar.gz 말고 일반 cmake-3.24.2가 보일 것이다.&lt;/p>
+&lt;h2 id="해당-폴더로-접속하여-bootstrap-실행">해당 폴더로 접속하여 bootstrap 실행&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">cd cmake-3.24.2
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;img src="https://icebluehalls.github.io/p/how-to-download-cmake-in-ubuntu/move_to_folder.PNG"
+width="979"
+height="512"
+srcset="https://icebluehalls.github.io/p/how-to-download-cmake-in-ubuntu/move_to_folder_hu0ea1265a809870b5e0467c161d877821_29615_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/how-to-download-cmake-in-ubuntu/move_to_folder_hu0ea1265a809870b5e0467c161d877821_29615_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="191"
+data-flex-basis="458px"
+>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">./bootstrap --prefix=/usr/local
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;img src="https://icebluehalls.github.io/p/how-to-download-cmake-in-ubuntu/bootstrap_start.PNG"
+width="979"
+height="512"
+srcset="https://icebluehalls.github.io/p/how-to-download-cmake-in-ubuntu/bootstrap_start_hu74a77c9180ec18536a994a6ab6117445_32275_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/how-to-download-cmake-in-ubuntu/bootstrap_start_hu74a77c9180ec18536a994a6ab6117445_32275_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="191"
+data-flex-basis="458px"
+>&lt;/p>
+&lt;h3 id="c-미설치-에러">c++ 미설치 에러&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">root@DESKTOP-49U4JDF:~/cmake-3.24.2# ls
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Auxiliary CMakeLogo.gif DartConfig.cmake Source configure
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Bootstrap.cmk CONTRIBUTING.rst Help Templates doxygen.config
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">CMakeCPack.cmake CTestConfig.cmake Licenses Tests
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">CMakeCPackOptions.cmake.in CTestCustom.cmake.in Modules Utilities
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">CMakeGraphVizOptions.cmake CompileFlags.cmake Packaging bootstrap
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">CMakeLists.txt Copyright.txt README.rst cmake_uninstall.cmake.in
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">root@DESKTOP-49U4JDF:~/cmake-3.24.2# sudo sh bootstrap
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">---------------------------------------------
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">CMake 3.24.2, Copyright 2000-2022 Kitware, Inc. and Contributors
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">C compiler on this system is: cc
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">---------------------------------------------
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Error when bootstrapping CMake:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Cannot find a C++ compiler that supports both C++11 and the specified C++ flags.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Please specify one using environment variable CXX.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">The C++ flags are &amp;#34;&amp;#34;.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">They can be changed using the environment variable CXXFLAGS.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">See cmake_bootstrap.log for compilers attempted.
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>위와 같은 에러가 뜰 경우, 아래 명령어를 통해 g++을 다운받아야한다.(아래 openssl과 함께 참조)&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">apt-get install g++
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="openssl-미설치-에러">openssl 미설치 에러&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Could NOT find OpenSSL, try to set the path to OpenSSL root folder in the system variable OPENSSL_ROOT_DIR
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;img src="https://icebluehalls.github.io/p/how-to-download-cmake-in-ubuntu/ssl_error.PNG"
+width="979"
+height="512"
+srcset="https://icebluehalls.github.io/p/how-to-download-cmake-in-ubuntu/ssl_error_hu9f32fe31c98fdb8b32482bb560acc798_28300_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/how-to-download-cmake-in-ubuntu/ssl_error_hu9f32fe31c98fdb8b32482bb560acc798_28300_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="191"
+data-flex-basis="458px"
+>&lt;/p>
+&lt;p>아래 명령어를 통해 openssl을 다운받아야한다&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">apt-get install libssl-dev
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;img src="https://icebluehalls.github.io/p/how-to-download-cmake-in-ubuntu/install_libssl.PNG"
+width="979"
+height="512"
+srcset="https://icebluehalls.github.io/p/how-to-download-cmake-in-ubuntu/install_libssl_hu12b429c87525cd41dc3bd39a8b3b1776_27233_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/how-to-download-cmake-in-ubuntu/install_libssl_hu12b429c87525cd41dc3bd39a8b3b1776_27233_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="191"
+data-flex-basis="458px"
+>&lt;/p>
+&lt;h2 id="make--make-install-명령어로-cmake를-설치한다">make &amp;amp; make install 명령어로 cmake를 설치한다&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">make
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;img src="https://icebluehalls.github.io/p/how-to-download-cmake-in-ubuntu/make.PNG"
+width="979"
+height="512"
+srcset="https://icebluehalls.github.io/p/how-to-download-cmake-in-ubuntu/make_hu9a1187c9797a7b7c5f15eefca734d921_38225_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/how-to-download-cmake-in-ubuntu/make_hu9a1187c9797a7b7c5f15eefca734d921_38225_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="191"
+data-flex-basis="458px"
+>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">make install
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;img src="https://icebluehalls.github.io/p/how-to-download-cmake-in-ubuntu/make_install_start.PNG"
+width="979"
+height="512"
+srcset="https://icebluehalls.github.io/p/how-to-download-cmake-in-ubuntu/make_install_start_hu9abf1c6c223c6afac30897dc8242a5c0_37492_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/how-to-download-cmake-in-ubuntu/make_install_start_hu9abf1c6c223c6afac30897dc8242a5c0_37492_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="191"
+data-flex-basis="458px"
+>&lt;/p>
+&lt;h2 id="설치-완료-버전-확인">설치 완료. 버전 확인&lt;/h2>
+&lt;p>정상적으로 3.24.2가 출력되면 성공한 것이다.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">cmake --version
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;img src="https://icebluehalls.github.io/p/how-to-download-cmake-in-ubuntu/check_version.PNG"
+width="979"
+height="512"
+srcset="https://icebluehalls.github.io/p/how-to-download-cmake-in-ubuntu/check_version_hu981533722a6a31b543c94f6b72bfdbf5_39403_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/how-to-download-cmake-in-ubuntu/check_version_hu981533722a6a31b543c94f6b72bfdbf5_39403_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="191"
+data-flex-basis="458px"
+>&lt;/p></description></item></channel></rss>

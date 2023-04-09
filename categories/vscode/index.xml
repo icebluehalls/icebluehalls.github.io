@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>VSCode on IceBlueHalls</title><link>https://icebluehalls.github.io/categories/vscode/</link><description>Recent content in VSCode on IceBlueHalls</description><generator>Hugo -- gohugo.io</generator><language>ko-kr</language><lastBuildDate>Wed, 28 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://icebluehalls.github.io/categories/vscode/index.xml" rel="self" type="application/rss+xml"/><item><title>VSCode에서 중괄호 스타일 K&amp;R로 변경하기</title><link>https://icebluehalls.github.io/p/how-to-change-knr-style/</link><pubDate>Wed, 28 Sep 2022 00:00:00 +0000</pubDate><guid>https://icebluehalls.github.io/p/how-to-change-knr-style/</guid><description>&lt;img src="https://icebluehalls.github.io/p/how-to-change-knr-style/before_after.png" alt="Featured image of post VSCode에서 중괄호 스타일 K&amp;R로 변경하기" />&lt;h2 id="개요">개요&lt;/h2>
+&lt;p>현재 사용중인 코딩 스타일은 BSD로 다음과 같다.&lt;/p>
+&lt;p>&lt;strong>BSD&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">int main()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>문득 이쁘지 않은 거 같아 K&amp;amp;R 스타일로 바꿔보려고 한다.&lt;/p>
+&lt;p>&lt;strong>K&amp;amp;R&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">int main() {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Visual Studio는 쉽게 기능을 제공해주는데, VSCode는 설정에서 지원하지 않아 커스텀 설정을 해주어야 한다.&lt;/p>
+&lt;h2 id="1-c-확장-설치">1 .C# 확장 설치&lt;/h2>
+&lt;p>VSCode 왼쪽 확장 탭 버튼을 통해 확장 탭으로 가고 C#을 검색하여 Microsoft에서 공식 지원하는 확장(extension)을 다운받는다.
+&lt;img src="https://icebluehalls.github.io/p/how-to-change-knr-style/vscode.png"
+width="1376"
+height="589"
+srcset="https://icebluehalls.github.io/p/how-to-change-knr-style/vscode_huf7ad4d28bd95dd34f1fed54c0f31a140_127990_480x0_resize_box_3.png 480w, https://icebluehalls.github.io/p/how-to-change-knr-style/vscode_huf7ad4d28bd95dd34f1fed54c0f31a140_127990_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Image"
+class="gallery-image"
+data-flex-grow="233"
+data-flex-basis="560px"
+>&lt;/p>
+&lt;h2 id="2-omnisharp-폴더-찾기">2. .omnisharp 폴더 찾기&lt;/h2>
+&lt;p>확장의 설치가 다되었으면 내 컴퓨터 어딘가에 설정값을 저장하는 폴더가 생긴다.
+아마 대부분은 내 PC &amp;gt; 로컬 디스크 C &amp;gt; 사용자 &amp;gt; {사용자 이름} &amp;gt; .omnisharp 폴더로 생길 것이다.
+&lt;img src="https://icebluehalls.github.io/p/how-to-change-knr-style/omnisharp_folder.png"
+width="1108"
+height="606"
+srcset="https://icebluehalls.github.io/p/how-to-change-knr-style/omnisharp_folder_huf8ff9ce75f8b217bb587aca1d726841b_34843_480x0_resize_box_3.png 480w, https://icebluehalls.github.io/p/how-to-change-knr-style/omnisharp_folder_huf8ff9ce75f8b217bb587aca1d726841b_34843_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Image"
+class="gallery-image"
+data-flex-grow="182"
+data-flex-basis="438px"
+>&lt;/p>
+&lt;p>앞으로 여기에 있는 설정값에 따라 c# 문법은 해당 설정값에 따라 포맷팅이 될 것이다.&lt;/p>
+&lt;h2 id="3-omnisharpjson-파일-새로-생성">3. omnisharp.json 파일 새로 생성&lt;/h2>
+&lt;p>설정값을 적용하기 위해서는 .omnisharp 폴더에 omnisharp.json이라는 json 파일을 만들어야한다.
+이름이 틀리면 작동하지 않는다.&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/how-to-change-knr-style/omnisharp_text.png"
+width="1108"
+height="606"
+srcset="https://icebluehalls.github.io/p/how-to-change-knr-style/omnisharp_text_hu205b7fe20d1f0c59ec6de47e70456239_36410_480x0_resize_box_3.png 480w, https://icebluehalls.github.io/p/how-to-change-knr-style/omnisharp_text_hu205b7fe20d1f0c59ec6de47e70456239_36410_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Image"
+class="gallery-image"
+data-flex-grow="182"
+data-flex-basis="438px"
+>&lt;/p>
+&lt;h2 id="4-omnisharpjson-작성">4. omnisharp.json 작성&lt;/h2>
+&lt;p>생성했으면 안에 값을 다음과 같이 입력한다.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">{
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;FormattingOptions&amp;#34;: {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;NewLinesForBracesInTypes&amp;#34;: false,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;NewLinesForBracesInAccessors&amp;#34;: false,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;NewLinesForBracesInAnonymousMethods&amp;#34;: false,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;NewLinesForBracesInAnonymousTypes&amp;#34;: false,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;NewLinesForBracesInLambdaExpressionBody&amp;#34;: false,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;NewLinesForBracesInObjectCollectionArrayInitializers&amp;#34;: false,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;NewLinesForBracesInProperties&amp;#34;: false,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;NewLinesForBracesInControlBlocks&amp;#34;: false,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;NewLinesForBracesInMethods&amp;#34;: false,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;NewLineForClausesInQuery&amp;#34;: false,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;NewLineForCatch&amp;#34;: false,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;NewLineForElse&amp;#34;: false,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;NewLineForFinally&amp;#34;: false,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;NewLineForMembersInObjectInit&amp;#34;: false,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;NewLineForMembersInAnonymousTypes&amp;#34;: false,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;WrappingPreserveSingleLine&amp;#34;: true,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;WrappingKeepStatementsOnSingleLine&amp;#34;: true,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;UseTabs&amp;#34;: true,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;TabSize&amp;#34;: 4,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;SpaceAfterCast&amp;#34;: false
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;img src="https://icebluehalls.github.io/p/how-to-change-knr-style/omnisharp_info.png"
+width="816"
+height="582"
+srcset="https://icebluehalls.github.io/p/how-to-change-knr-style/omnisharp_info_hufa66abdfc71a6bf88161d682f1455029_50191_480x0_resize_box_3.png 480w, https://icebluehalls.github.io/p/how-to-change-knr-style/omnisharp_info_hufa66abdfc71a6bf88161d682f1455029_50191_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Image"
+class="gallery-image"
+data-flex-grow="140"
+data-flex-basis="336px"
+>&lt;/p>
+&lt;h3 id="설정값">설정값&lt;/h3>
+&lt;p>여기서 영어를 할 수 있는 분들이라면 커스텀마이징이 가능해진다.
+위 설정값을 true/false로 변경하는 것으로 쉽게 수정이 가능하며, 위에 기재된 설정값 외에도 더 많은 값들이 존재한다.&lt;/p>
+&lt;p>위 값 또한 스택오버플로우에서 유저들이 사용하는 것을 그대로 가져온 것이기 때문에 기본이 되는 규약은 아니다.
+거기서 추가한 것은 Catch, Finally문에서도 K&amp;amp;R이 적용되도록 NewLineForCatch와 NewLineForFinally를 false로 한 설정 뿐이다.&lt;/p>
+&lt;h2 id="5-완료">5. 완료&lt;/h2>
+&lt;p>이것으로 기본 포맷팅은 완료가 되었다.&lt;/p>
+&lt;p>한번 VSCode를 껏다 키고 포맷팅이 원하는대로 되는지 확인하자.
+Alt + Shift + F 시 현재 페이지를 포맷팅 할 수 있다.(Ctrl + Shift + F는 검색이므로 혼동하지 말자)
+&lt;img src="https://icebluehalls.github.io/p/how-to-change-knr-style/before_after.png"
+width="1416"
+height="496"
+srcset="https://icebluehalls.github.io/p/how-to-change-knr-style/before_after_hu793d13c132bc9ed6008e2f1a1a16b8ca_28353_480x0_resize_box_3.png 480w, https://icebluehalls.github.io/p/how-to-change-knr-style/before_after_hu793d13c132bc9ed6008e2f1a1a16b8ca_28353_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Image"
+class="gallery-image"
+data-flex-grow="285"
+data-flex-basis="685px"
+>&lt;/p>
+&lt;h2 id="그-외">그 외&lt;/h2>
+&lt;p>처음에는 적용이 안되고 포맷팅이 아예 안되는 현상이 있었다.
+이 경우 C# 확장을 최신 버전이 아닌 1~2단계 아래 버전으로 바꾸었더니 확장이 새로 설치되면서 적용이 되었다.&lt;/p></description></item></channel></rss>

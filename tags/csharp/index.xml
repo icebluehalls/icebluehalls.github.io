@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>CSharp on IceBlueHalls</title><link>https://icebluehalls.github.io/tags/csharp/</link><description>Recent content in CSharp on IceBlueHalls</description><generator>Hugo -- gohugo.io</generator><language>ko-kr</language><lastBuildDate>Mon, 23 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://icebluehalls.github.io/tags/csharp/index.xml" rel="self" type="application/rss+xml"/><item><title>HttpRequestMessage 사용 시, Specfied cast is not valid 에러 발생</title><link>https://icebluehalls.github.io/p/http-request-message-error2/</link><pubDate>Mon, 23 Jan 2023 00:00:00 +0000</pubDate><guid>https://icebluehalls.github.io/p/http-request-message-error2/</guid><description>&lt;img src="https://icebluehalls.github.io/p/http-request-message-error2/success.png" alt="Featured image of post HttpRequestMessage 사용 시, Specfied cast is not valid 에러 발생" />&lt;h2 id="에러-발생">에러 발생&lt;/h2>
+&lt;p>유니티에서 HttpRequest 통신을 구현하였다.
+이전 컴퓨터에서는 잘 돌아갔지만 새로운 컴퓨터에서 시도해 보니 다음과 같은 에러가 발생하였다.&lt;/p>
+&lt;h3 id="테스트-코드">테스트 코드&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-csharp" data-lang="csharp">&lt;span class="line">&lt;span class="cl">&lt;span class="k">using&lt;/span> &lt;span class="nn">UnityEngine&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">public&lt;/span> &lt;span class="k">class&lt;/span> &lt;span class="nc">NewBehaviourScript&lt;/span> &lt;span class="p">:&lt;/span> &lt;span class="n">MonoBehaviour&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">void&lt;/span> &lt;span class="n">Start&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Debug&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">Log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">Net&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">Dns&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">GetHostName&lt;/span>&lt;span class="p">());&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="실행-시-에러">실행 시 에러&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">Specfied&lt;/span> &lt;span class="nx">cast&lt;/span> &lt;span class="nx">is&lt;/span> &lt;span class="nx">not&lt;/span> &lt;span class="nx">valid&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>열심히 찾아본 결과, 데이터 전송 시에 규격이 맞지 않다는 에러가 대부분이었고, 내가 파싱 방식을 지정하는 것도 아닌데다 다른 컴퓨터에서는 잘만 실행되는지라 이상하여 코드 문제보다는 설정 문제로 추측하였다.&lt;/p>
+&lt;h2 id="정답은-proxy-레지스트리-잘못">정답은 Proxy 레지스트리 잘못!&lt;/h2>
+&lt;p>해결 방법은 &lt;a class="link" href="https://blog.naver.com/jelly753f/222127953518" target="_blank" rel="noopener"
+>해당 블로그&lt;/a>를 참조하였다.&lt;/p>
+&lt;p>다른 컴퓨터에서는 잘 실행되던 문제인지라 로컬 설정값중 에러가 있을 것으로 추측하였고, 그중 제일 신빙성이 있어보이는 것이 서버와 연결하는 프록시 관련 설정이 이상할 것이라고 추측하였다.&lt;/p>
+&lt;p>확인해본 결과 ProxyEnable이 REG_DWORD로 되어있어야 하지만 REG_BINARY로 되어있었다.&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/http-request-message-error2/error.png"
+width="1651"
+height="1018"
+srcset="https://icebluehalls.github.io/p/http-request-message-error2/error_hud823714e18393fb03ff57874d0a548e7_138836_480x0_resize_box_3.png 480w, https://icebluehalls.github.io/p/http-request-message-error2/error_hud823714e18393fb03ff57874d0a548e7_138836_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="162"
+data-flex-basis="389px"
+>&lt;/p>
+&lt;p>해당 레지스트리를 삭제하고 동일한 이름의 REG_DWORD로 생성하였더니 잘 실행되었다.&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/http-request-message-error2/success.png"
+width="1735"
+height="1018"
+srcset="https://icebluehalls.github.io/p/http-request-message-error2/success_hu44029e90c4387745ca36e7ea1bf2bea2_143420_480x0_resize_box_3.png 480w, https://icebluehalls.github.io/p/http-request-message-error2/success_hu44029e90c4387745ca36e7ea1bf2bea2_143420_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="170"
+data-flex-basis="409px"
+>&lt;/p></description></item><item><title>HttpRequestMessage 사용 시, illegal byte sequence encounted in the input. 에러 발생</title><link>https://icebluehalls.github.io/p/http-request-message-error1/</link><pubDate>Mon, 09 Jan 2023 00:00:00 +0000</pubDate><guid>https://icebluehalls.github.io/p/http-request-message-error1/</guid><description>&lt;img src="https://icebluehalls.github.io/p/http-request-message-error1/unity-error.png" alt="Featured image of post HttpRequestMessage 사용 시, illegal byte sequence encounted in the input. 에러 발생" />&lt;h2 id="에러-발생">에러 발생&lt;/h2>
+&lt;p>유니티에서 HttpRequest 통신을 구현하였다.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">Illegal&lt;/span> &lt;span class="kr">byte&lt;/span> &lt;span class="nx">sequence&lt;/span> &lt;span class="nx">encounted&lt;/span> &lt;span class="k">in&lt;/span> &lt;span class="nx">the&lt;/span> &lt;span class="nx">input&lt;/span>&lt;span class="p">.&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>하지만 호출 시, 다음과 같은 에러가 발생하게 된다.&lt;/p>
+&lt;p>열심히 검색해본 결과, 대부분의 답변은 프로젝트에 사용되는 경로중에 한글이 있어서 발생한다는 답변이었다.&lt;/p>
+&lt;h2 id="프로젝트-경로에-한글">프로젝트 경로에 한글?&lt;/h2>
+&lt;p>근데 관련 경로를 찾아보아도 한글은 존재하지 않았다.&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/http-request-message-error1/unity-default.png"
+width="1193"
+height="600"
+srcset="https://icebluehalls.github.io/p/http-request-message-error1/unity-default_hu23a42aa42259dfed886b99f7989dd04d_30330_480x0_resize_box_3.png 480w, https://icebluehalls.github.io/p/http-request-message-error1/unity-default_hu23a42aa42259dfed886b99f7989dd04d_30330_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="198"
+data-flex-basis="477px"
+>&lt;/p>
+&lt;p>사용자 이름도 영어로 되어있어서 해당 문제는 아니였고, 검색해본 결과 HttpRequest중에 호스트 이름을 사용하는 것을 알게 되었다.&lt;/p>
+&lt;h2 id="gethostname으로-테스트">GetHostName으로 테스트&lt;/h2>
+&lt;p>관련된 함수중 로컬 호스트 이름=기기명을 불러오는 함수를 알게 되었고 다른 사람들은 잘 안되는데 내 컴퓨터만 계속해서 에러가 발생중.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">using&lt;/span> &lt;span class="nx">UnityEngine&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">public&lt;/span> &lt;span class="kr">class&lt;/span> &lt;span class="nx">NewBehaviourScript&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="nx">MonoBehaviour&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">void&lt;/span> &lt;span class="nx">Start&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">Debug&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Net&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Dns&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">GetHostName&lt;/span>&lt;span class="p">());&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;img src="https://icebluehalls.github.io/p/http-request-message-error1/unity-error.png"
+width="1256"
+height="720"
+srcset="https://icebluehalls.github.io/p/http-request-message-error1/unity-error_hu1297f5b3d907bb9a07ff7c712d5fb996_49783_480x0_resize_box_3.png 480w, https://icebluehalls.github.io/p/http-request-message-error1/unity-error_hu1297f5b3d907bb9a07ff7c712d5fb996_49783_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="174"
+data-flex-basis="418px"
+>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-csharp" data-lang="csharp">&lt;span class="line">&lt;span class="cl">&lt;span class="n">ExecutionEngineException&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">String&lt;/span> &lt;span class="n">conversion&lt;/span> &lt;span class="n">error&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">Illegal&lt;/span> &lt;span class="kt">byte&lt;/span> &lt;span class="n">sequence&lt;/span> &lt;span class="n">encounted&lt;/span> &lt;span class="k">in&lt;/span> &lt;span class="n">the&lt;/span> &lt;span class="n">input&lt;/span>&lt;span class="p">.&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="정답은-기기-이름">정답은 기기 이름!&lt;/h2>
+&lt;p>기기를 확인해보니 ‘내PC’라는 한글이 포함된 이름을 사용하고 있었고…&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/http-request-message-error1/check-my-pc.png"
+width="1448"
+height="766"
+srcset="https://icebluehalls.github.io/p/http-request-message-error1/check-my-pc_hu0414544ee2fa84610516252cb94361d2_59759_480x0_resize_box_3.png 480w, https://icebluehalls.github.io/p/http-request-message-error1/check-my-pc_hu0414544ee2fa84610516252cb94361d2_59759_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="189"
+data-flex-basis="453px"
+>&lt;/p>
+&lt;p>영어로 바꾸고,&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/http-request-message-error1/change-to-english.png"
+width="1448"
+height="767"
+srcset="https://icebluehalls.github.io/p/http-request-message-error1/change-to-english_hu00617aa278d59f6dbd87f357aa78fc2c_60271_480x0_resize_box_3.png 480w, https://icebluehalls.github.io/p/http-request-message-error1/change-to-english_hu00617aa278d59f6dbd87f357aa78fc2c_60271_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="188"
+data-flex-basis="453px"
+>&lt;/p>
+&lt;p>DNS.GetHostName을 실행했더니&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/http-request-message-error1/success.png"
+width="1072"
+height="650"
+srcset="https://icebluehalls.github.io/p/http-request-message-error1/success_hudd1ff845ca056f52b1359c33633c0a9f_22491_480x0_resize_box_3.png 480w, https://icebluehalls.github.io/p/http-request-message-error1/success_hudd1ff845ca056f52b1359c33633c0a9f_22491_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="164"
+data-flex-basis="395px"
+>&lt;/p>
+&lt;p>잘실행되었다.&lt;/p>
+&lt;p>어쨋든 한글이 있으면 해당 에러가 발생하는 것을 알게되었다.&lt;/p>
+&lt;h2 id="추가">추가&lt;/h2>
+&lt;p>유니티 경로중에 Program Files등의 띄어쓰기가 있는 경로나 한글이 들어가 있음에도 에러는 발생하지 않았다.&lt;/p></description></item><item><title>VSCode에서 중괄호 스타일 K&amp;R로 변경하기</title><link>https://icebluehalls.github.io/p/how-to-change-knr-style/</link><pubDate>Wed, 28 Sep 2022 00:00:00 +0000</pubDate><guid>https://icebluehalls.github.io/p/how-to-change-knr-style/</guid><description>&lt;img src="https://icebluehalls.github.io/p/how-to-change-knr-style/before_after.png" alt="Featured image of post VSCode에서 중괄호 스타일 K&amp;R로 변경하기" />&lt;h2 id="개요">개요&lt;/h2>
+&lt;p>현재 사용중인 코딩 스타일은 BSD로 다음과 같다.&lt;/p>
+&lt;p>&lt;strong>BSD&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">int main()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>문득 이쁘지 않은 거 같아 K&amp;amp;R 스타일로 바꿔보려고 한다.&lt;/p>
+&lt;p>&lt;strong>K&amp;amp;R&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">int main() {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Visual Studio는 쉽게 기능을 제공해주는데, VSCode는 설정에서 지원하지 않아 커스텀 설정을 해주어야 한다.&lt;/p>
+&lt;h2 id="1-c-확장-설치">1 .C# 확장 설치&lt;/h2>
+&lt;p>VSCode 왼쪽 확장 탭 버튼을 통해 확장 탭으로 가고 C#을 검색하여 Microsoft에서 공식 지원하는 확장(extension)을 다운받는다.
+&lt;img src="https://icebluehalls.github.io/p/how-to-change-knr-style/vscode.png"
+width="1376"
+height="589"
+srcset="https://icebluehalls.github.io/p/how-to-change-knr-style/vscode_huf7ad4d28bd95dd34f1fed54c0f31a140_127990_480x0_resize_box_3.png 480w, https://icebluehalls.github.io/p/how-to-change-knr-style/vscode_huf7ad4d28bd95dd34f1fed54c0f31a140_127990_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Image"
+class="gallery-image"
+data-flex-grow="233"
+data-flex-basis="560px"
+>&lt;/p>
+&lt;h2 id="2-omnisharp-폴더-찾기">2. .omnisharp 폴더 찾기&lt;/h2>
+&lt;p>확장의 설치가 다되었으면 내 컴퓨터 어딘가에 설정값을 저장하는 폴더가 생긴다.
+아마 대부분은 내 PC &amp;gt; 로컬 디스크 C &amp;gt; 사용자 &amp;gt; {사용자 이름} &amp;gt; .omnisharp 폴더로 생길 것이다.
+&lt;img src="https://icebluehalls.github.io/p/how-to-change-knr-style/omnisharp_folder.png"
+width="1108"
+height="606"
+srcset="https://icebluehalls.github.io/p/how-to-change-knr-style/omnisharp_folder_huf8ff9ce75f8b217bb587aca1d726841b_34843_480x0_resize_box_3.png 480w, https://icebluehalls.github.io/p/how-to-change-knr-style/omnisharp_folder_huf8ff9ce75f8b217bb587aca1d726841b_34843_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Image"
+class="gallery-image"
+data-flex-grow="182"
+data-flex-basis="438px"
+>&lt;/p>
+&lt;p>앞으로 여기에 있는 설정값에 따라 c# 문법은 해당 설정값에 따라 포맷팅이 될 것이다.&lt;/p>
+&lt;h2 id="3-omnisharpjson-파일-새로-생성">3. omnisharp.json 파일 새로 생성&lt;/h2>
+&lt;p>설정값을 적용하기 위해서는 .omnisharp 폴더에 omnisharp.json이라는 json 파일을 만들어야한다.
+이름이 틀리면 작동하지 않는다.&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/how-to-change-knr-style/omnisharp_text.png"
+width="1108"
+height="606"
+srcset="https://icebluehalls.github.io/p/how-to-change-knr-style/omnisharp_text_hu205b7fe20d1f0c59ec6de47e70456239_36410_480x0_resize_box_3.png 480w, https://icebluehalls.github.io/p/how-to-change-knr-style/omnisharp_text_hu205b7fe20d1f0c59ec6de47e70456239_36410_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Image"
+class="gallery-image"
+data-flex-grow="182"
+data-flex-basis="438px"
+>&lt;/p>
+&lt;h2 id="4-omnisharpjson-작성">4. omnisharp.json 작성&lt;/h2>
+&lt;p>생성했으면 안에 값을 다음과 같이 입력한다.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">{
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;FormattingOptions&amp;#34;: {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;NewLinesForBracesInTypes&amp;#34;: false,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;NewLinesForBracesInAccessors&amp;#34;: false,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;NewLinesForBracesInAnonymousMethods&amp;#34;: false,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;NewLinesForBracesInAnonymousTypes&amp;#34;: false,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;NewLinesForBracesInLambdaExpressionBody&amp;#34;: false,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;NewLinesForBracesInObjectCollectionArrayInitializers&amp;#34;: false,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;NewLinesForBracesInProperties&amp;#34;: false,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;NewLinesForBracesInControlBlocks&amp;#34;: false,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;NewLinesForBracesInMethods&amp;#34;: false,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;NewLineForClausesInQuery&amp;#34;: false,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;NewLineForCatch&amp;#34;: false,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;NewLineForElse&amp;#34;: false,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;NewLineForFinally&amp;#34;: false,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;NewLineForMembersInObjectInit&amp;#34;: false,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;NewLineForMembersInAnonymousTypes&amp;#34;: false,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;WrappingPreserveSingleLine&amp;#34;: true,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;WrappingKeepStatementsOnSingleLine&amp;#34;: true,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;UseTabs&amp;#34;: true,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;TabSize&amp;#34;: 4,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;SpaceAfterCast&amp;#34;: false
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;img src="https://icebluehalls.github.io/p/how-to-change-knr-style/omnisharp_info.png"
+width="816"
+height="582"
+srcset="https://icebluehalls.github.io/p/how-to-change-knr-style/omnisharp_info_hufa66abdfc71a6bf88161d682f1455029_50191_480x0_resize_box_3.png 480w, https://icebluehalls.github.io/p/how-to-change-knr-style/omnisharp_info_hufa66abdfc71a6bf88161d682f1455029_50191_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Image"
+class="gallery-image"
+data-flex-grow="140"
+data-flex-basis="336px"
+>&lt;/p>
+&lt;h3 id="설정값">설정값&lt;/h3>
+&lt;p>여기서 영어를 할 수 있는 분들이라면 커스텀마이징이 가능해진다.
+위 설정값을 true/false로 변경하는 것으로 쉽게 수정이 가능하며, 위에 기재된 설정값 외에도 더 많은 값들이 존재한다.&lt;/p>
+&lt;p>위 값 또한 스택오버플로우에서 유저들이 사용하는 것을 그대로 가져온 것이기 때문에 기본이 되는 규약은 아니다.
+거기서 추가한 것은 Catch, Finally문에서도 K&amp;amp;R이 적용되도록 NewLineForCatch와 NewLineForFinally를 false로 한 설정 뿐이다.&lt;/p>
+&lt;h2 id="5-완료">5. 완료&lt;/h2>
+&lt;p>이것으로 기본 포맷팅은 완료가 되었다.&lt;/p>
+&lt;p>한번 VSCode를 껏다 키고 포맷팅이 원하는대로 되는지 확인하자.
+Alt + Shift + F 시 현재 페이지를 포맷팅 할 수 있다.(Ctrl + Shift + F는 검색이므로 혼동하지 말자)
+&lt;img src="https://icebluehalls.github.io/p/how-to-change-knr-style/before_after.png"
+width="1416"
+height="496"
+srcset="https://icebluehalls.github.io/p/how-to-change-knr-style/before_after_hu793d13c132bc9ed6008e2f1a1a16b8ca_28353_480x0_resize_box_3.png 480w, https://icebluehalls.github.io/p/how-to-change-knr-style/before_after_hu793d13c132bc9ed6008e2f1a1a16b8ca_28353_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Image"
+class="gallery-image"
+data-flex-grow="285"
+data-flex-basis="685px"
+>&lt;/p>
+&lt;h2 id="그-외">그 외&lt;/h2>
+&lt;p>처음에는 적용이 안되고 포맷팅이 아예 안되는 현상이 있었다.
+이 경우 C# 확장을 최신 버전이 아닌 1~2단계 아래 버전으로 바꾸었더니 확장이 새로 설치되면서 적용이 되었다.&lt;/p></description></item></channel></rss>

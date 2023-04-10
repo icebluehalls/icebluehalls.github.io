@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SQL on IceBlueHalls</title><link>https://icebluehalls.github.io/categories/sql/</link><description>Recent content in SQL on IceBlueHalls</description><generator>Hugo -- gohugo.io</generator><language>ko-kr</language><lastBuildDate>Mon, 10 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://icebluehalls.github.io/categories/sql/index.xml" rel="self" type="application/rss+xml"/><item><title>[백문이불여일타] 데이터 분석을 위한 중급 SQL 강의 요약</title><link>https://icebluehalls.github.io/p/sql-study-normal/</link><pubDate>Mon, 10 Apr 2023 00:00:00 +0000</pubDate><guid>https://icebluehalls.github.io/p/sql-study-normal/</guid><description>&lt;img src="https://icebluehalls.github.io/p/sql-study-normal/main.png" alt="Featured image of post [백문이불여일타] 데이터 분석을 위한 중급 SQL 강의 요약" />&lt;h1 id="sql-중급">SQL 중급&lt;/h1>
+&lt;h2 id="count">COUNT&lt;/h2>
+&lt;p>SELECT COUNT(*) FROM product
+product 테이블 내에 모든 row의 갯수를 구한다.&lt;/p>
+&lt;p>SELECT COUNT(name) FROM product
+product 테이블 내에 name이 NULL이 아닌 모든 데이터를 반환&lt;/p>
+&lt;p>SELECT COUNT(DISTINCT company) FROM product
+product 테이블 내에 company이 NULL이 아니고, 이름이 중복되지 않은 모든 데이터를 반환&lt;/p>
+&lt;h2 id="avg">AVG&lt;/h2>
+&lt;p>SELECT AVG(total) FROM product
+product 테이블 내에 total의 평균을 구한다. 이때 NULL값은 계산에 포함이 안된다.&lt;/p>
+&lt;p>SELECT SUM(total)/COUNT(*) FROM product
+product 테이블 내에 (total의 합계 / 총 row량) 구한다. Null은 계산에 대입이 되나 0으로 설정한다.&lt;/p>
+&lt;h2 id="min">MIN&lt;/h2>
+&lt;p>SELECT MIN(total) FROM product
+product 내에 total이 제일 큰 row를 구한다&lt;/p>
+&lt;h2 id="max">MAX&lt;/h2>
+&lt;p>SELECT MAX(total) FROM product
+product 내에 total이 제일 큰 row를 구한다&lt;/p>
+&lt;h2 id="group-by">GROUP BY&lt;/h2>
+&lt;p>SELECT SupplierID, AVG(Price)
+FROM Product
+GROUP BY SupplierID
+Product 테이블 내에 동일 SupplierID의 평균을 구해라&lt;/p>
+&lt;p>SELECT SupplierID, CategoryID, AVG(Price)
+FROM Product
+GROUP BY SupplierID, CategoryID
+Product 테이블 내에 동일 SupplierID 중 Category 또한 동일한 값들의 평균을 구해라&lt;/p>
+&lt;h2 id="where">WHERE&lt;/h2>
+&lt;p>WHERE : 테이블의 모든 데이터 내에서 조건을 검색하고 그 이후에 GROUP BY를 한다
+SELECT SupplierID, CategoryID, AVG(Price)
+FROM Product
+WHERE Price &amp;gt;= 100
+GROUP BY SupplierID, CategoryID
+Product 테이블 내에 Price가 100골드 이상인 데이터만 가져와서 동일 SupplierID 중 Category 또한 동일한 값들의 평균을 구해라&lt;/p>
+&lt;h2 id="having">HAVING&lt;/h2>
+&lt;p>HAVING : GROUP BY 한 데이터 내에 검색되는 조건을 부여한다
+SELECT SupplierID, CategoryID, AVG(Price)
+FROM Product
+GROUP BY SupplierID, CategoryID
+HAVING AVG(Price)
+Product 테이블 내에 Price가 가져와서 동일 SupplierID 중 Category 또한 동일한 값들 중 평균 100골드 이상인 데이터들의 평균만 보여줘라&lt;/p>
+&lt;p>(권장 X, 명확하게 하는 것이 가독성에 좋다)
+SELECT SupplierID, CategoryID, AVG(Price)
+FROM Product
+GROUP By 1, 2&lt;/p>
+&lt;p>SELECT 내에 첫번째(SupplierID)와 두번째 요소(CategoryID)를 GroupBy 해라&lt;/p>
+&lt;h2 id="tip-1">Tip 1&lt;/h2>
+&lt;p>SELECT SupplierID
+&amp;ndash; , CategoryID
+, AVG(Price)
+FROM Products
+GROUP BY SupplierID
+, CategoryID
+위와 같이 요소들을 분리하여 쓰면 주석 처리에 용이하다&lt;/p>
+&lt;h2 id="소수점-처리">소수점 처리&lt;/h2>
+&lt;h3 id="ceil">CEIL&lt;/h3>
+&lt;p>SELECT CEIL(5.5)
+-&amp;gt; 6&lt;/p>
+&lt;h3 id="floor">FLOOR&lt;/h3>
+&lt;p>SELECT FLOOR(5.5)
+-&amp;gt; 5&lt;/p>
+&lt;h3 id="round">ROUND&lt;/h3>
+&lt;p>SELECT ROUND(5.1234, 1)
+-&amp;gt; 소수점 1번째 자리수까지만 보여주고 나머지는 반올림&lt;/p>
+&lt;h2 id="case">CASE&lt;/h2>
+&lt;h3 id="case-when-then-end">CASE WHEN THEN END&lt;/h3>
+&lt;p>조건에 맞는 데이터를 태깅해준다.(단순 보여주기)&lt;/p>
+&lt;p>SELECT CASE
+WHEN categoryId = 1 THEN &amp;ldquo;과자&amp;rdquo;
+WHEN categoryId = 2 THEN &amp;ldquo;음료수&amp;rdquo;
+WHEN 3 &amp;lt; categoryId AND categoryId &amp;lt; 10 THEN &amp;ldquo;화장품&amp;rdquo;
+ELSE &amp;ldquo;비판매품&amp;rdquo;
+END AS &amp;ldquo;CategoryName&amp;rdquo;
+FROM Market
+-&amp;gt; Market테이블에서 categoryId가 1이면 과자를, 2면 음료수를 3~10이면 화장품을 그 외 조건이면 비판매품이라고 태깅한다. 그리고 새로 만들어진 컬럼을 CategoryName이라고 칭한다.&lt;/p>
+&lt;h2 id="join">JOIN&lt;/h2>
+&lt;p>두 테이블의 연결고리를 이용하여 통합한다.&lt;/p>
+&lt;h3 id="inner-join-on">INNER JOIN ON&lt;/h3>
+&lt;p>SELECT *
+FROM Orders
+INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID
+INNER JOIN Shippers ON Orders.ShipperID = Shippers.ShipperID&lt;/p>
+&lt;p>Orders 테이블에 있는 CustomerID와 Customers 테이블에 있는 CustomerID가 일치하는 것들을 매칭하여 한번에 보여준다.
+그리고 Orders 테이블에 이쓴ㄴ ShipperID와 Shippers 테이블에 있는 ShippersID가 일치하는 데이터 또한 Customers의 오른쪽에 표시한다.
+다만 Orders가 가지고 있지 않은 데이터는 보여지지 않는다.(Customers.CustomerID가 4까지 있고 Orders.CustomerID가 3까지 있으면 매칭되지 않고 리스트에서 제외된다.)&lt;/p>
+&lt;h3 id="left-join-on">LEFT JOIN ON&lt;/h3>
+&lt;p>SELECT *
+FROM Customers
+LEFT JOIN Orders ON Customers.CustomerID = Orders.CustomerID&lt;/p>
+&lt;p>Customers 테이블에 존재하는 데이터를 기준으로 Orders의 CustomerID와 매칭되는 데이터들을 같이 표시한다. 이때 Orders에 없다면 Null로 표시한다.&lt;/p>
+&lt;h3 id="left-join-on-1">LEFT JOIN ON&lt;/h3>
+&lt;p>SELECT *
+FROM Customers
+RIGHT JOIN Orders ON Customers.CustomerID = Orders.CustomerID&lt;/p>
+&lt;p>Orders 테이블에 존재하는 데이터를 기준으로 Customers의 CustomerID와 매칭되는 데이터들을 같이 표시한다. 이때 Orders에 없다면 Null로 표시한다.
+다만 사람은 주로 왼쪽부터 보기 때문에 LEFT만 사용하며 값을 바꾸는 것을 추천한다.&lt;/p></description></item><item><title>[백문이불여일타] 데이터 분석을 위한 기초 SQL 강의 요약</title><link>https://icebluehalls.github.io/p/sql-study-easy/</link><pubDate>Sun, 09 Apr 2023 00:00:00 +0000</pubDate><guid>https://icebluehalls.github.io/p/sql-study-easy/</guid><description>&lt;img src="https://icebluehalls.github.io/p/sql-study-easy/main.png" alt="Featured image of post [백문이불여일타] 데이터 분석을 위한 기초 SQL 강의 요약" />&lt;h1 id="sql-기초">SQL 기초&lt;/h1>
+&lt;h2 id="select--from--limit">SELECT / FROM / LIMIT&lt;/h2>
+&lt;h3 id="select">SELECT&lt;/h3>
+&lt;p>SELECT : 데이터를 불러옵니다.
+SELECT *일 경우, 조건 없이 모든 데이터를 가져옵니다.
+SELECT {컬럼 이름} 일 경우, 해당 컬럼만 노출이 됩니다.&lt;/p>
+&lt;h3 id="from">FROM&lt;/h3>
+&lt;p>FROM : 어느 티에블에서 가져올 것인지 설정합니다.
+FROM {테이블 명}
+FROM Customers 일 경우, Customer 테이블에 있는 데이터를 불러옵니다.&lt;/p>
+&lt;dl>
+&lt;dt>예시 :&lt;/dt>
+&lt;dt>SELECT * FROM Customers&lt;/dt>
+&lt;dd>Customers 테이블에 있는 모든 데이터를 불러옵니다.&lt;/dd>
+&lt;dt>SELECT CustomerName, Address FROM Customers&lt;/dt>
+&lt;dd>Custmers 테이블에 있는 모든 데이터중 CustomersName과 Address만 노출하여 보여줍니다&lt;/dd>
+&lt;/dl>
+&lt;h3 id="limit">LIMIT&lt;/h3>
+&lt;p>LIMIT : LIMIT을 지정하지 않을 경우 모든 데이터를 불러올 수 있습니다. LIMIT은 상위 n개의 데이터만을 불러오게 합니다.&lt;/p>
+&lt;dl>
+&lt;dt>예시 :&lt;/dt>
+&lt;dt>SELECT * FROM Customers LIMIT 10&lt;/dt>
+&lt;dd>Customers에 있는 데이터중 상위 10개의 row만 불러옵니다.&lt;/dd>
+&lt;/dl>
+&lt;h3 id="tip-1">Tip 1&lt;/h3>
+&lt;p>SQL 문법은 강제성이 있는 것은 아니지만 가독성을 위해 대문자로 표기하는 것을 권장한다.
+select (x), SELECT (o)&lt;/p>
+&lt;h2 id="조건에-맞는-데이터-검색하기">조건에 맞는 데이터 검색하기&lt;/h2>
+&lt;h3 id="where">WHERE&lt;/h3>
+&lt;p>WHERE : 비교연산자와 논리연산자. 컬럼 속 데이터의 조건에 따라 검색하는 것이 가능하다.&lt;/p>
+&lt;dl>
+&lt;dt>SELECT * FROM Customers WHERE CustomerName &amp;lt; &amp;ldquo;B&amp;rdquo;&lt;/dt>
+&lt;dd>Customers의 전체 데이터중 CustomerName이 B로 시작하는 데이터를 가져와라&lt;/dd>
+&lt;dt>SELECT * FROM Customers WHERE CustomerID &amp;lt; 50&lt;/dt>
+&lt;dd>Customers의 전체 데이터중 CustomerID가 50보다 작은 데이터를 가져와라&lt;/dd>
+&lt;dt>SELECT * FROM Customers WHERE CustomerName &amp;lt; &amp;ldquo;B&amp;rdquo; AND Country = &amp;ldquo;Germany&amp;rdquo;&lt;/dt>
+&lt;dd>Customers의 전체 데이터중 CustomerName이 B로 시작하&lt;strong>면서&lt;/strong> Country가 Germany인 데이터를 가져와라&lt;/dd>
+&lt;dt>SELECT * FROM Customers WHERE CustomerName &amp;lt; &amp;ldquo;B&amp;rdquo; OR Country = &amp;ldquo;Germany&amp;rdquo;&lt;/dt>
+&lt;dd>Customers의 전체 데이터중 CustomerName이 B로 시작하&lt;strong>거나&lt;/strong> Country가 Germany인 데이터를 가져와라&lt;/dd>
+&lt;/dl>
+&lt;h3 id="like">LIKE&lt;/h3>
+&lt;p>LIKE : 특정 문자열로 시작하거나, 끝나거나, 포함되어있는 데이터들을 가져오는 것이 가능하다.&lt;/p>
+&lt;p>%(와일드카드) : 기호를 통해 지정이 가능하다.&lt;/p>
+&lt;dl>
+&lt;dt>SELECT * FROM Customers WHERE country LIKE &amp;lsquo;Br%&amp;rsquo;&lt;/dt>
+&lt;dd>Customers의 전체 데이터중 country의 속성값이 Br로 시작하는 데이터들을 가져와라(Brazil등)&lt;/dd>
+&lt;dt>SELECT * FROM Customers WHERE country LIKE &amp;lsquo;%SA&amp;rsquo;&lt;/dt>
+&lt;dd>Customers의 전체 데이터중 country의 속성값이 Br로 끝나는 데이터들을 가져와라(USA등)&lt;/dd>
+&lt;dt>SELECT * FROM Customers WHERE country LIKE &amp;lsquo;%TA%&amp;rsquo;&lt;/dt>
+&lt;dd>Customers의 전체 데이터중 country의 속성값이 Br로 끝나는 데이터들을 가져와라(Italia, TAILLAND등)&lt;/dd>
+&lt;dt>SELECT * FROM Customers WHERE country LIKE &amp;lsquo;BRAZIL&amp;rsquo;&lt;/dt>
+&lt;dd>Customers의 전체 데이터중 country의 속성값이 Brazil인 데이터들을 가져와라. 다만 &lt;code>LIKE 'BRAZIL'&lt;/code> 보다는 &lt;code>= 'BRAZIL'&lt;/code>이 속도측면에서 훨씬 빠르다.&lt;/dd>
+&lt;dt>SELECT * FROM Customers WHERE country LIKE &amp;lsquo;B_____&amp;rsquo;&lt;/dt>
+&lt;dd>Customers의 전체 데이터중 country의 속성값이 B로 시작하는 5글자 짜리 데이터들을 가져와라.&lt;/dd>
+&lt;dt>SELECT * FROM Customers WHERE discount LIKE &amp;lsquo;50%&amp;rsquo;&lt;/dt>
+&lt;dd>Customers의 전체 데이터중 discount의 값이 50%인 데이터들을 가져와라.(% 기호는 예약어이므로 이스케이프를 통해 구분해야한다.)&lt;/dd>
+&lt;/dl>
+&lt;h3 id="in">IN&lt;/h3>
+&lt;p>IN : 일치하는 조건들을 여러 개 설정할 수 있다.&lt;/p>
+&lt;dl>
+&lt;dt>SELECT * FROM Customers WHERE country IN ( &amp;lsquo;KOREA&amp;rsquo;, &amp;lsquo;JAPAN&amp;rsquo;, &amp;lsquo;USA&amp;rsquo;)&lt;/dt>
+&lt;dd>Customers의 전체 데이터중 country 값이 Korea, Japan, Usa 중 하나인 데이터들을 가져와라&lt;/dd>
+&lt;/dl>
+&lt;h3 id="between">BETWEEN&lt;/h3>
+&lt;p>BETWEEN : 지정한 두 값 사이에 포함되는 데이터들을 가져올 수 있다.&lt;/p>
+&lt;dl>
+&lt;dt>SELECT * FROM Customers WHERE population BETWEEN 1000 AND 20000&lt;/dt>
+&lt;dd>Customers의 전체 데이터중 country 값이 population의 숫자형 데이터가 1000에서 20000 사이인 데이터들을 가져와라&lt;/dd>
+&lt;/dl>
+&lt;h3 id="is-null">IS NULL&lt;/h3>
+&lt;p>IS NULL : 해당 컬럼에 존재하지 않는 데이터들을 검색할 수 있다. NULL은 특수한 값이므로 &amp;lsquo;= NULL&amp;rsquo;은 검색이 불가능하다.&lt;/p>
+&lt;dl>
+&lt;dt>SELECT * FROM Customers WHERE customerID IS NULL&lt;/dt>
+&lt;dd>Customers의 전체 데이터중 customerID가 NULL인 데이터들을 불러와라&lt;/dd>
+&lt;dt>(잘못된 예시)SELECT * FROM Customers WHERE customerID = NULL&lt;/dt>
+&lt;dd>customerID가 NULL인 데이터가 불러와지지 않는다.&lt;/dd>
+&lt;/dl>
+&lt;h3 id="tip2">Tip2&lt;/h3>
+&lt;p>컬럼명은 대소문자 구분하지 않는다.
+따옴표와 작은 따옴표도 구분하지 않는다.&lt;/p>
+&lt;h3 id="distinct">DISTINCT&lt;/h3>
+&lt;p>DISTINCT : 중복되는 데이터를 없게 만들어준다.&lt;/p>
+&lt;dl>
+&lt;dt>SELECT DISTINCT city FROM station WHERE city LIKE &amp;lsquo;a%&amp;rsquo; OR city LIKE &amp;lsquo;america&amp;rsquo;&lt;/dt>
+&lt;dd>america는 a% 조건과 &amp;lsquo;america&amp;rsquo;조건 모두 겹치지만 한번만 출력됩니다.&lt;/dd>
+&lt;/dl>
+&lt;h2 id="데이터-순서-정렬하기">데이터 순서 정렬하기&lt;/h2>
+&lt;h3 id="order-by">ORDER BY&lt;/h3>
+&lt;p>ORDER BY : 오름차순 혹은 내림차순으로 데이터를 정렬한다. 보여주는 형식만 변경할 뿐 실제 데이터베이스의 순서가 바뀌지는 않는다.
+기본은 오름차순으로 되어있으며, ASC를 입력하여도 오름차순으로 정렬된다.(값이 큰게 아래)
+내림차순의 경우 DESC를 입력하면 된다.(값이 큰게 위)&lt;/p>
+&lt;dl>
+&lt;dt>SELECT * Customers ORDER BY customerid DESC&lt;/dt>
+&lt;dd>모든 Customers의 데이터들을 불러오 되 customerid가 내림차순으로 정렬하여 보여줘라.&lt;/dd>
+&lt;/dl>
+&lt;h3 id="tip3">Tip3&lt;/h3>
+&lt;p>명령어는 SELECT, FROM, WHERE, ORDER BY, LIMIT 순이다.&lt;/p>
+&lt;h2 id="그-외-함수">그 외 함수&lt;/h2>
+&lt;h3 id="mod">MOD&lt;/h3>
+&lt;p>MOD : 앞의 수 에서 뒤의 수를 나눈 후, 나머지를 반환한다.&lt;/p>
+&lt;dl>
+&lt;dt>SELECT * FROM city WHERE MOD(customer_id, 2) = 0&lt;/dt>
+&lt;dd>city 테이블의 전체 데이터중에서 customer_id를 2로 나누었을 때 나머지가 0인 데이터를 가져와라&lt;/dd>
+&lt;/dl>
+&lt;h3 id="count">COUNT&lt;/h3>
+&lt;dl>
+&lt;dt>COUNT : 검색된 데이터의 갯수를 구한다.&lt;/dt>
+&lt;dt>SELECT COUNT(ALL *) - COUNT(DISTINCT CITY) FROM STATION&lt;/dt>
+&lt;dd>STATION 테이블의 (모든 데이터의 수) - (CITY가 중복되는 데이터의 수)를 반환하라&lt;/dd>
+&lt;/dl></description></item></channel></rss>

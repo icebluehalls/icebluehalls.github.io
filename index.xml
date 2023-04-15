@@ -1,4 +1,201 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>IceBlueHalls</title><link>https://icebluehalls.github.io/</link><description>Recent content on IceBlueHalls</description><generator>Hugo -- gohugo.io</generator><language>ko-kr</language><lastBuildDate>Mon, 10 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://icebluehalls.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>[백문이불여일타] 데이터 분석을 위한 중급 SQL 강의 요약</title><link>https://icebluehalls.github.io/p/sql-study-normal/</link><pubDate>Mon, 10 Apr 2023 00:00:00 +0000</pubDate><guid>https://icebluehalls.github.io/p/sql-study-normal/</guid><description>&lt;img src="https://icebluehalls.github.io/p/sql-study-normal/main.png" alt="Featured image of post [백문이불여일타] 데이터 분석을 위한 중급 SQL 강의 요약" />&lt;h1 id="sql-중급">SQL 중급&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>IceBlueHalls</title><link>https://icebluehalls.github.io/</link><description>Recent content on IceBlueHalls</description><generator>Hugo -- gohugo.io</generator><language>ko-kr</language><lastBuildDate>Wed, 12 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://icebluehalls.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>따라하기 제일 쉬운 Hugo로 블로그 만들기 #1</title><link>https://icebluehalls.github.io/p/etc/hugo/install1/</link><pubDate>Wed, 12 Apr 2023 00:00:00 +0000</pubDate><guid>https://icebluehalls.github.io/p/etc/hugo/install1/</guid><description>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/10.PNG" alt="Featured image of post 따라하기 제일 쉬운 Hugo로 블로그 만들기 #1" />&lt;h2 id="1-github에서-레포지토리-생성">1. GitHub에서 레포지토리 생성&lt;/h2>
+&lt;p>레포지토리는 콘텐츠 저장용 하나, 보여지기 용 하나.&lt;br>
+총 2개의 레포짓토리가 생성됩니다.&lt;/p>
+&lt;ul>
+&lt;li>콘텐츠 저장용 : myBlog&lt;/li>
+&lt;li>보여지기용 : mntchocopsycho.github.io&lt;/li>
+&lt;/ul>
+&lt;h3 id="1-콘텐츠-저장용-블로그-레포지토리-생성">1. 콘텐츠 저장용 블로그 레포지토리 생성&lt;/h3>
+&lt;p>Github에서 새로운 respository를 생성합니다.
+&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/1.PNG"
+width="2052"
+height="1308"
+srcset="https://icebluehalls.github.io/p/etc/hugo/install1/1_hu029c5ad66ee79a28614d716a1eb62721_176608_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install1/1_hu029c5ad66ee79a28614d716a1eb62721_176608_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="156"
+data-flex-basis="376px"
+>&lt;/p>
+&lt;p>생성 시, 이름은 상관이 없으며 중요한 점은 Public으로 설정되어있어야합니다.
+&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/3.PNG"
+width="2052"
+height="1308"
+srcset="https://icebluehalls.github.io/p/etc/hugo/install1/3_hu60d467a353f66475914381c33969fee1_113948_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install1/3_hu60d467a353f66475914381c33969fee1_113948_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="156"
+data-flex-basis="376px"
+>&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/4.PNG"
+width="2052"
+height="1308"
+srcset="https://icebluehalls.github.io/p/etc/hugo/install1/4_hu7c24b3e161122bdc8062905ab78f0c92_99077_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install1/4_hu7c24b3e161122bdc8062905ab78f0c92_99077_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="156"
+data-flex-basis="376px"
+>&lt;/p>
+&lt;h3 id="2-보여지기용-블로그-레포지토리-생성">2. 보여지기용 블로그 레포지토리 생성&lt;/h3>
+&lt;p>콘텐츠용 블로그 레포지토리가 생성되었으면 이번에는 보여지기용(실제 URL) 레포지토리를 생성합니다.&lt;/p>
+&lt;p>여기 또한 public으로 설정해야 하며, 이름은 자신의 닉네임이 들어간 주소로 만들어야합니다.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">{블로그 이름}.github.io
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/5.PNG"
+width="2052"
+height="1308"
+srcset="https://icebluehalls.github.io/p/etc/hugo/install1/5_hu4e2af09d102b33ff7fb47667b3ace13c_117304_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install1/5_hu4e2af09d102b33ff7fb47667b3ace13c_117304_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="156"
+data-flex-basis="376px"
+>&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/6.PNG"
+width="2052"
+height="1308"
+srcset="https://icebluehalls.github.io/p/etc/hugo/install1/6_hu1e19337f6b5ae1e159c6d87f23a04fb1_107364_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install1/6_hu1e19337f6b5ae1e159c6d87f23a04fb1_107364_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="156"
+data-flex-basis="376px"
+>&lt;/p>
+&lt;h2 id="콘텐츠용-블로그-주소로-다운로드">콘텐츠용 블로그 주소로 다운로드&lt;/h2>
+&lt;p>myBlog 레포지토리에 들어가서 HTTPS로 된 git clone 주소를 복사합니다.&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/7.PNG"
+width="2052"
+height="1308"
+srcset="https://icebluehalls.github.io/p/etc/hugo/install1/7_hu29a6637b6a64fdd525a80660c1897f03_162325_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install1/7_hu29a6637b6a64fdd525a80660c1897f03_162325_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="156"
+data-flex-basis="376px"
+>&lt;/p>
+&lt;p>그리고 컴퓨터에 다운받습니다.(여기서는 Fork 라는 Git UI 프로그램을 사용했습니다.)&lt;/p>
+&lt;p>주소는 아무곳이나 상관없습니다.&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/8.PNG"
+width="2052"
+height="1308"
+srcset="https://icebluehalls.github.io/p/etc/hugo/install1/8_hu4397a82d36f8465860fdcad261c1b134_211498_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install1/8_hu4397a82d36f8465860fdcad261c1b134_211498_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="156"
+data-flex-basis="376px"
+>&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/9.PNG"
+width="2052"
+height="1308"
+srcset="https://icebluehalls.github.io/p/etc/hugo/install1/9_hu35e699938fbc0aa922ac93629d76195e_206397_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install1/9_hu35e699938fbc0aa922ac93629d76195e_206397_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="156"
+data-flex-basis="376px"
+>&lt;/p>
+&lt;h2 id="3-hugo-다운로드">3. Hugo 다운로드&lt;/h2>
+&lt;p>&lt;a class="link" href="https://gohugo.io/installation/" target="_blank" rel="noopener"
+>Hugo 다운로드 주소&lt;/a>에 접속합니다.&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/10.PNG"
+width="2052"
+height="1308"
+srcset="https://icebluehalls.github.io/p/etc/hugo/install1/10_hudc211de25df7a1149cde5d1bbe1a01ed_135908_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install1/10_hudc211de25df7a1149cde5d1bbe1a01ed_135908_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="156"
+data-flex-basis="376px"
+>&lt;/p>
+&lt;p>컴퓨터가 Windows 이므로 &lt;a class="link" href="https://gohugo.io/installation/windows/" target="_blank" rel="noopener"
+>Windows&lt;/a>를 클릭합니다.&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/11.PNG"
+width="2052"
+height="1308"
+srcset="https://icebluehalls.github.io/p/etc/hugo/install1/11_hu4c3b5321629363fc4a7520c4b5409561_142462_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install1/11_hu4c3b5321629363fc4a7520c4b5409561_142462_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="156"
+data-flex-basis="376px"
+>&lt;/p>
+&lt;p>Prebuilt Binaries에서 &lt;a class="link" href="https://github.com/gohugoio/hugo/releases/tag/v0.111.3" target="_blank" rel="noopener"
+>latest release&lt;/a>를 클릭하여 Hugo의 진짜 다운로드 페이지로 이동합니다.&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/12.PNG"
+width="2052"
+height="1308"
+srcset="https://icebluehalls.github.io/p/etc/hugo/install1/12_huc2f49550011baed309a831d9651c7d0a_181371_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install1/12_huc2f49550011baed309a831d9651c7d0a_181371_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="156"
+data-flex-basis="376px"
+>&lt;/p>
+&lt;p>제일 밑으로 스크롤을 내려 &lt;strong>hugo_extended_0.xxx_windows-amd64.zip&lt;/strong> 을 다운받습니다.&lt;/p>
+&lt;p>extended로 다운받는 이유는 일반 hugo로는 일부 테마에서는 scss(css 진화판)을 읽지 못해서 extended로 다운받았습니다.&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/13.PNG"
+width="2052"
+height="1308"
+srcset="https://icebluehalls.github.io/p/etc/hugo/install1/13_hucf29096e60d71505730d3ce1b29658a8_267152_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install1/13_hucf29096e60d71505730d3ce1b29658a8_267152_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="156"
+data-flex-basis="376px"
+>&lt;/p>
+&lt;p>&lt;code>C:\Program Files\Hugo&lt;/code>에 압축을 해제합니다.
+Hugo 폴더 안에 hugo.exe, LICENSE, README.md가 존재하면 됩니다.&lt;/p>
+&lt;h2 id="hugo-환경-변수-설정">Hugo 환경 변수 설정&lt;/h2>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/14.PNG"
+width="2052"
+height="1308"
+srcset="https://icebluehalls.github.io/p/etc/hugo/install1/14_hucf29096e60d71505730d3ce1b29658a8_850672_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install1/14_hucf29096e60d71505730d3ce1b29658a8_850672_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="156"
+data-flex-basis="376px"
+>
+Hugo를 cmd에서 호출하기 위해서는 환경 변수를 설정해야합니다.&lt;/p>
+&lt;p>제어판의 시스템 환경 변수 편집을 들어갑니다.&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/15.PNG"
+width="680"
+height="872"
+srcset="https://icebluehalls.github.io/p/etc/hugo/install1/15_hu4499c4f813b4102a0728a13bacf7c067_22739_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install1/15_hu4499c4f813b4102a0728a13bacf7c067_22739_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="77"
+data-flex-basis="187px"
+>
+시스템 설정에서 &lt;strong>환경 변수&lt;/strong>를 클릭합니다.&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/16.PNG"
+width="882"
+height="968"
+srcset="https://icebluehalls.github.io/p/etc/hugo/install1/16_hu686178c9bf6b8f96d68a522fff0838ca_40299_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install1/16_hu686178c9bf6b8f96d68a522fff0838ca_40299_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="91"
+data-flex-basis="218px"
+>
+시스템 변수의 Path를 클릭하여 편집을 클릭합니다.&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/17.PNG"
+width="752"
+height="827"
+srcset="https://icebluehalls.github.io/p/etc/hugo/install1/17_hu4d218cc1da85fe88f927ccff8b85927e_28308_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install1/17_hu4d218cc1da85fe88f927ccff8b85927e_28308_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="90"
+data-flex-basis="218px"
+>
+Hugo 폴더를 새로 추가합니다.(만약 다른 곳에 설치하였다면 해당 경로로 설장합니다.)&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/18.PNG"
+width="1468"
+height="766"
+srcset="https://icebluehalls.github.io/p/etc/hugo/install1/18_hucdcc46bda1c4cff8ce66e30fb96d1221_19945_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install1/18_hucdcc46bda1c4cff8ce66e30fb96d1221_19945_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="191"
+data-flex-basis="459px"
+>
+설정이 완료되었다면 완료를 클릭하여 테스트를 실시해봅니다.&lt;/p>
+&lt;p>cmd를 열어서 hugo version을 입력해봅니다.&lt;br>
+Hugo의 버전을 알려주는 메세지가 나오면 성공한 것입니다.&lt;/p></description></item><item><title>[백문이불여일타] 데이터 분석을 위한 중급 SQL 강의 요약</title><link>https://icebluehalls.github.io/p/sql-study-normal/</link><pubDate>Mon, 10 Apr 2023 00:00:00 +0000</pubDate><guid>https://icebluehalls.github.io/p/sql-study-normal/</guid><description>&lt;img src="https://icebluehalls.github.io/p/sql-study-normal/main.png" alt="Featured image of post [백문이불여일타] 데이터 분석을 위한 중급 SQL 강의 요약" />&lt;h1 id="sql-중급">SQL 중급&lt;/h1>
 &lt;h2 id="count">COUNT&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">

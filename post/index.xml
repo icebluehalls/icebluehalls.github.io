@@ -1,4 +1,84 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on IceBlueHalls</title><link>https://icebluehalls.github.io/post/</link><description>Recent content in Posts on IceBlueHalls</description><generator>Hugo -- gohugo.io</generator><language>ko-kr</language><lastBuildDate>Wed, 12 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://icebluehalls.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>따라하기 제일 쉬운 Hugo로 블로그 만들기 #1</title><link>https://icebluehalls.github.io/p/etc/hugo/install1/</link><pubDate>Wed, 12 Apr 2023 00:00:00 +0000</pubDate><guid>https://icebluehalls.github.io/p/etc/hugo/install1/</guid><description>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/10.PNG" alt="Featured image of post 따라하기 제일 쉬운 Hugo로 블로그 만들기 #1" />&lt;h2 id="1-github에서-레포지토리-생성">1. GitHub에서 레포지토리 생성&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on IceBlueHalls</title><link>https://icebluehalls.github.io/post/</link><description>Recent content in Posts on IceBlueHalls</description><generator>Hugo -- gohugo.io</generator><language>ko-kr</language><lastBuildDate>Sat, 15 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://icebluehalls.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>심리학 강의 7강 - 동기</title><link>https://icebluehalls.github.io/p/psychology-7/</link><pubDate>Sat, 15 Apr 2023 00:00:00 +0000</pubDate><guid>https://icebluehalls.github.io/p/psychology-7/</guid><description>&lt;h1 id="동기">동기&lt;/h1>
+&lt;p>동기 : 목표를 향해 행동하도록 행동의 방향성을 제시하는 내외적 요소들의 집합&lt;/p>
+&lt;h2 id="동기이론">동기이론&lt;/h2>
+&lt;h3 id="추동감소이론">추동감소이론&lt;/h3>
+&lt;p>생리적 박탈이 생리적 욕구를 형성하고,&lt;br>
+욕구 미충족 시 생리적 추동을 느끼면서,&lt;br>
+이 추동 에너지가 욕구 해결 행동을 하면서 동기를 부여&lt;/p>
+&lt;p>(목마름 &amp;gt; 물 필요 : 갈증 &amp;gt; 물 마시기)&lt;/p>
+&lt;blockquote>
+&lt;p>예외, 맛과 다양성 추구는 결핍 없는 행동.&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>쥐에게 설탕물과 물을 주면 설탕물을 선택하고, 한개의 음식보다는 두개의 음식을 먹었을 때 30% 더 먹었다.&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="유인이론">유인이론&lt;/h3>
+&lt;p>외부환경 자극, 유인가가 행동의 동기(예시 : 돈, 좋은 성적, 인정, 버튼 쥐)&lt;/p>
+&lt;h3 id="각성이론">각성이론&lt;/h3>
+&lt;p>행동은 최적의 각성 수준을 유지하는 것에 동기화.&lt;br>
+낮을 경우에는 노는 것을 통해 각성 수준을 올림(극단적으로는 놀이기구등의 익스트림 스포츠)&lt;br>
+높을 경우에는 쉬거나 잠을 자서 각성 수준을 저하.(과대 각성은 효율성 저하)&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/psychology-7/yerkes.png"
+width="475"
+height="389"
+srcset="https://icebluehalls.github.io/p/psychology-7/yerkes_hu8d6d5274091be7f037bbd6bc36e21636_37729_480x0_resize_box_3.png 480w, https://icebluehalls.github.io/p/psychology-7/yerkes_hu8d6d5274091be7f037bbd6bc36e21636_37729_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="요크스 덕슨의 법칙"
+class="gallery-image"
+data-flex-grow="122"
+data-flex-basis="293px"
+>&lt;/p>
+&lt;p>시험전에는 각성 &amp;gt; 긴장 상태&lt;br>
+공부는 쉬운 작업. 각성이 늦게 되고 빨리 사라짐&lt;br>
+발표는 어려운 작업. 각성이 쉽게 되고, 빨리 사라짐&lt;/p>
+&lt;h2 id="심리적-동기-이론">심리적 동기 이론&lt;/h2>
+&lt;h3 id="매슬로의-욕구-위계-이론">매슬로의 욕구 위계 이론&lt;/h3>
+&lt;p>자아실현의 욕구 :&lt;br>
+인간은 자기실현을 향해 성장하는 동물
+하위욕구 충족 시 상위욕구를 충족하는 마음&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/psychology-7/maslow.png"
+width="620"
+height="280"
+srcset="https://icebluehalls.github.io/p/psychology-7/maslow_hu904c3c59fb4c7e387a9f8f753d795065_167020_480x0_resize_box_3.png 480w, https://icebluehalls.github.io/p/psychology-7/maslow_hu904c3c59fb4c7e387a9f8f753d795065_167020_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="메슬로의 욕구 위계 이론 5단계"
+class="gallery-image"
+data-flex-grow="221"
+data-flex-basis="531px"
+>&lt;/p>
+&lt;p>자아실현의 욕구가 충족되기 위해서는 존경, 소속감과 사랑, 안전, 생리적 욕구가 충족 되어야한다.&lt;/p>
+&lt;h3 id="자기-결정-이론">자기 결정 이론&lt;/h3>
+&lt;p>성장과 통합 과정을 돕는 선천적인 &lt;strong>기본 심리적 욕구&lt;/strong>가 존재&lt;/p>
+&lt;p>&lt;strong>기본 심리적 욕구&lt;/strong> :&lt;/p>
+&lt;p>자율성&lt;/p>
+&lt;ol>
+&lt;li>미래는 내 자신이 결정&lt;/li>
+&lt;li>내 생각과 의견 자유롭게 표현&lt;/li>
+&lt;li>일 진행 방법은 스스로 결정&lt;/li>
+&lt;/ol>
+&lt;p>유능감 :&lt;/p>
+&lt;ul>
+&lt;li>내 자신이 유능&lt;/li>
+&lt;li>주변 사람은 내가 일을 잘한다고 생각&lt;/li>
+&lt;li>내가 하는 대부분에 일들에서 성취감&lt;/li>
+&lt;/ul>
+&lt;p>관계성 :&lt;/p>
+&lt;ul>
+&lt;li>나와 관련된 사람과 잘 지냄&lt;/li>
+&lt;li>내 주변 사람들은 나에게 관심 있음&lt;/li>
+&lt;li>나는 함께하는 사람 좋아함&lt;/li>
+&lt;/ul>
+&lt;h2 id="외재적-동기--내재적-동기">외재적 동기 &amp;amp; 내재적 동기&lt;/h2>
+&lt;p>외재적 동기 : 보상 얻기 위해 행동(경제,명성,인정,이미지,외모)&lt;br>
+내제적 동기 : 나를 성장시키기 위해 행동&lt;br>
+(개인적 성장, 대인 관계, 사회 공헌, 건강)&lt;/p>
+&lt;p>과잉 정당화 : 외적동기 목적인데 보상이 없을 경우, 내제적 동기화된 행동이 감소&lt;br>
+(게임중독에게 외적 동기로 바꿔서 욕하면 줄어듬)&lt;/p>
+&lt;p>내재적 동기 충족 시 기본 심리적 욕구가 채워지면서 행복 &amp;amp; 번영이 된다.&lt;br>
+외제적도 가능하지만 내제적이 되기 위해 외제적을 개발하므로 돌아가는 방법이다.&lt;/p>
+&lt;h2 id="학습목표--평가목표">학습목표 &amp;amp; 평가목표&lt;/h2>
+&lt;p>&lt;strong>학습목표&lt;/strong> : 도전, 노력, 도전적 과제, 과정의 즐거움을 강조하는 환경,&lt;br>
+&lt;strong>평가목표&lt;/strong> : 포기, 좌절, 쉬운 과제, 점수 석차를 강조하는 환경, 지능 능력에 대한 칭찬&lt;/p></description></item><item><title>따라하기 제일 쉬운 Hugo로 블로그 만들기 #1</title><link>https://icebluehalls.github.io/p/etc/hugo/install1/</link><pubDate>Wed, 12 Apr 2023 00:00:00 +0000</pubDate><guid>https://icebluehalls.github.io/p/etc/hugo/install1/</guid><description>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/10.PNG" alt="Featured image of post 따라하기 제일 쉬운 Hugo로 블로그 만들기 #1" />&lt;h2 id="1-github에서-레포지토리-생성">1. GitHub에서 레포지토리 생성&lt;/h2>
 &lt;p>레포지토리는 콘텐츠 저장용 하나, 보여지기 용 하나.&lt;br>
 총 2개의 레포짓토리가 생성됩니다.&lt;/p>
 &lt;ul>
@@ -677,7 +757,571 @@ select (x), SELECT (o)&lt;/p>
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">COUNT&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">ALL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">COUNT&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">DISTINCT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">CITY&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">STATION&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>: STATION 테이블의 (모든 데이터의 수) - (CITY가 중복되는 데이터의 수)를 반환하라&lt;/p></description></item><item><title>인디 게임 한줄평</title><link>https://icebluehalls.github.io/p/playlist-indie/</link><pubDate>Fri, 17 Mar 2023 00:00:00 +0000</pubDate><guid>https://icebluehalls.github.io/p/playlist-indie/</guid><description>&lt;img src="https://icebluehalls.github.io/p/playlist-indie/title.png" alt="Featured image of post 인디 게임 한줄평" />&lt;p>&lt;img src="https://icebluehalls.github.io/p/playlist-indie/title.png"
+&lt;/div>&lt;p>: STATION 테이블의 (모든 데이터의 수) - (CITY가 중복되는 데이터의 수)를 반환하라&lt;/p></description></item><item><title>심리학 강의 6강 - 성격</title><link>https://icebluehalls.github.io/p/psychology-6/</link><pubDate>Sat, 08 Apr 2023 00:00:00 +0000</pubDate><guid>https://icebluehalls.github.io/p/psychology-6/</guid><description>&lt;h1 id="성격">성격&lt;/h1>
+&lt;p>성격 : 환경 적응 과정에서 일관성 있게 나타나는 개인 특유의 행동이나 사고방식&lt;/p>
+&lt;h2 id="성격의-유전적-근원">성격의 유전적 근원&lt;/h2>
+&lt;h3 id="쌍둥이-연구">쌍둥이 연구&lt;/h3>
+&lt;p>일란성 쌍둥이가 이란성 쌍둥이보다 유전자 지수가 두배 높았다.&lt;/p>
+&lt;h3 id="미네소타-쌍둥이-연구-">미네소타 쌍둥이 연구 :&lt;/h3>
+&lt;p>3주만에 헤어진 쌍둥이를 30년 후에 봤더니 와이프, 아들, 강아지 이름 모두 똑같았다.&lt;br>
+=&amp;gt; 환경은 달라도 유전이 같았기 때문에 같은 모습이 되었다.&lt;/p>
+&lt;h2 id="정신분석이론프로이트">정신분석이론(프로이트)&lt;/h2>
+&lt;h3 id="정신분석의-구성-요소">정신분석의 구성 요소&lt;/h3>
+&lt;p>의식 : 개인이 자각중인 상태&lt;br>
+전의식 : 평소에느 의식하진 않지만 노력하면 의식되는 상태(크리스마스에 뭐헀어?)&lt;br>
+무의식 : 자신에 대한 인식이 없는 상태&lt;/p>
+&lt;h3 id="본능-이론">본능 이론&lt;/h3>
+&lt;p>삶의 본능(eros) : 생물학 욕구, 리비도(삶의 본능으로 나타난 정신 에너지,성에너지)&lt;br>
+죽음의 본능(thanatos) : 죽이고 싶은 소망&lt;/p>
+&lt;h3 id="성격의-구조">성격의 구조&lt;/h3>
+&lt;p>원욕/원초아(id)&lt;/p>
+&lt;ul>
+&lt;li>무의식&lt;/li>
+&lt;li>생득적 욕구(식욕,배설욕) 충족과 관련&lt;/li>
+&lt;li>쾌락의 원리&lt;/li>
+&lt;li>예시 : 애기들의 욕구충족&lt;/li>
+&lt;/ul>
+&lt;p>자아(ego) = 이성&lt;/p>
+&lt;ul>
+&lt;li>생후 1년부터 발달&lt;/li>
+&lt;li>원초아의 욕구를 현실저으로 집행 – 욕구 지연, 통제, 충족방법 결정&lt;/li>
+&lt;li>현실의 원리&lt;/li>
+&lt;li>예시 : 똥오줌 바로 싸지 않고 참기&lt;/li>
+&lt;/ul>
+&lt;p>초자아(superego) = 양심&lt;/p>
+&lt;ul>
+&lt;li>3~6세에 발달&lt;/li>
+&lt;li>사회문화의 이상화된 행동기준&lt;/li>
+&lt;li>내적 도덕성과 개인의 자아이상에 의해 작동&lt;/li>
+&lt;li>절대 도덕의 원리&lt;/li>
+&lt;li>예시 : 도둑질&lt;/li>
+&lt;/ul>
+&lt;p>사람에 따라 원욕,자아,초자아의 배분이 다르다.&lt;/p>
+&lt;h2 id="방어기제">방어기제&lt;/h2>
+&lt;p>자아가 불안으로부터 개인을 보호하기 위해서 무의식적으로 현실을 왜곡하는 과정&lt;br>
+타나토스만 있다면 사는 게 힘듬.&lt;/p>
+&lt;p>&lt;strong>억압&lt;/strong> : 고통스러운 기억을 떠오르지 않게 하기 (기억상실)&lt;/p>
+&lt;p>&lt;strong>퇴행&lt;/strong> : 어린시절의 미성숙한 행동으로 후퇴하기 (손가락 빨기, 둘째의 질투)&lt;/p>
+&lt;p>&lt;strong>반동형성&lt;/strong> : 용납 못하는 충동을 반대 행동으로 하는 것 (이혼녀가 남편생각나는 자식을 과도하게 키우기)&lt;/p>
+&lt;p>&lt;strong>투사&lt;/strong> : 용납 못하는 감정을 타인에게 전가.&lt;br>
+(섹시해지고 싶다. -&amp;gt; 섹시한 사람에게 문란하다고 욕하기(원래는 자기 욕구에게 욕))&lt;/p>
+&lt;p>&lt;strong>전위/치환&lt;/strong> : 용납 못하는 감정을 덜 위협적인 대상에게 발산(사장님께 혼남 -&amp;gt; 직원을 혼냄)&lt;/p>
+&lt;p>&lt;strong>승화&lt;/strong> : 사회적 용납 안되는 것들을 건설적 활동으로 전환.(공격성 있는 복서, 성적 욕구를 미술로)&lt;/p>
+&lt;p>&lt;strong>합리화&lt;/strong> : 용납 못하는 감정에 대해 거짓으로 해명(저 포도는 셔서 못먹었을 거야)&lt;/p>
+&lt;h2 id="심리학적-발달-단계">심리학적 발달 단계&lt;/h2>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>구강기(0~1)&lt;/strong> :&lt;/p>
+&lt;ul>
+&lt;li>구강을 통한 생물학적 충동 해소.&lt;/li>
+&lt;li>섭식, 음주, 흡연(프로이트).&lt;/li>
+&lt;li>욕설 험담, 의존적, 잘 속거나 경솔한 성격&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>항문기(1~3)&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>항문(리비도)&lt;/li>
+&lt;li>배변훈련을 통해 자기 통제 – 자아(ego)&lt;/li>
+&lt;li>정리정돈, 청결, 고집&lt;/li>
+&lt;li>불결함, 무질서, 파괴적, 잔인함&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>남근기(3 ~ 5)&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>성기(리비도).&lt;/li>
+&lt;li>오이디푸스(남아), 일렉트라(여아) 콤플렉스 - 성별 반대되는 부모를 질투, 엄빠를 사랑&lt;/li>
+&lt;li>자부심과 만용, 허영&lt;/li>
+&lt;li>자기증오, 겸손, 슬픔&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>잠재기(6 ~ 11)&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>성 에너지 &amp;lt; 지적 탐구심&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>성기기(11 ~)&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>성기(리비도)&lt;/li>
+&lt;li>이성과의 성적 접촉&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="성격형성의-중요-요소">성격형성의 중요 요소&lt;/h2>
+&lt;ol>
+&lt;li>id, ego, superego의 상호작용&lt;/li>
+&lt;li>방어기제의 사용&lt;/li>
+&lt;li>6세 이전의 경험&lt;/li>
+&lt;/ol>
+&lt;h2 id="특성이론">특성이론&lt;/h2>
+&lt;h3 id="유형론">유형론&lt;/h3>
+&lt;h4 id="체질론">체질론&lt;/h4>
+&lt;p>셀돈(Sheldon): 대학생 4천명 체형과 기질 관계 분석&lt;/p>
+&lt;ul>
+&lt;li>내배엽형 : 사교적, 온화, 애정적(뱃살)&lt;/li>
+&lt;li>중배엽형 : 근육형, 경쟁적, 공격적(근육)&lt;/li>
+&lt;li>외배협형 : 지적,내향적,초조함,(멸치)&lt;/li>
+&lt;/ul>
+&lt;h4 id="혈액형">혈액형&lt;/h4>
+&lt;p>일정의 유형론이지만 학문적 타당성 X&lt;br>
+보편적 특성을 개인 특성이라 생각하는 바넘 효과&lt;/p>
+&lt;h3 id="특질-이론">특질 이론&lt;/h3>
+&lt;p>성격의 5요인 이론&lt;/p>
+&lt;ul>
+&lt;li>외향성(E) - 사교성&lt;/li>
+&lt;li>신경증(N) – 짜증 vs 평온&lt;/li>
+&lt;li>우호성(A) - 협력 vs 경쟁&lt;/li>
+&lt;li>성실성(C) – 체계적 vs 충동적&lt;/li>
+&lt;li>경험개방성(O) 진보 vs 보수&lt;/li>
+&lt;/ul>
+&lt;h2 id="성격평가">성격평가&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>객관적 검사&lt;/p>
+&lt;ul>
+&lt;li>구조화된 검사&lt;/li>
+&lt;li>제시된 문항에 스스로 응답하는 성격 검사&lt;/li>
+&lt;li>자기보고식&lt;/li>
+&lt;li>미네소타 다면성 (MMPI), MBTI&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>투사적 검사&lt;/p>
+&lt;ul>
+&lt;li>자극을 보고 자신의 지각에 대해 서술&lt;/li>
+&lt;li>투사적 검사 – 주제통각검사, 로르샤흐 잉크반점 검사&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul></description></item><item><title>심리학 강의 5강 - 기억</title><link>https://icebluehalls.github.io/p/psychology-5/</link><pubDate>Sat, 01 Apr 2023 00:00:00 +0000</pubDate><guid>https://icebluehalls.github.io/p/psychology-5/</guid><description>&lt;h1 id="기억">기억&lt;/h1>
+&lt;h2 id="정보처리이론">정보처리이론&lt;/h2>
+&lt;p>정보처리 : 부호화 &amp;gt; 저장 &amp;gt; 인출&lt;/p>
+&lt;h2 id="전통적-기억-모형">전통적 기억 모형&lt;/h2>
+&lt;p>Atkinson &amp;amp; Shiffrin 제작&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/psychology-5/memory.png"
+width="695"
+height="239"
+srcset="https://icebluehalls.github.io/p/psychology-5/memory_hub875be0f51d3626a12e0d55a34cb4d28_68360_480x0_resize_box_3.png 480w, https://icebluehalls.github.io/p/psychology-5/memory_hub875be0f51d3626a12e0d55a34cb4d28_68360_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="기억의 3단계 모형"
+class="gallery-image"
+data-flex-grow="290"
+data-flex-basis="697px"
+>&lt;/p>
+&lt;h2 id="감각기억">감각기억&lt;/h2>
+&lt;p>용량 : 매우 큼&lt;br>
+지속 시간 : 시각 1초, 청각 4초. 집중하면 단기기억으로 이동.&lt;/p>
+&lt;h2 id="단기기억">단기기억&lt;/h2>
+&lt;p>용량 : 7~9 청크(의미를 지닌 단위). 의미를 부여하면 1청크가 되며 더 많이 기억할 수 있다.
+지속시간 : 20~30초. 유지시연(반복 암기) 할수록 올라감.&lt;/p>
+&lt;p>419518625717815 &amp;lt;- 그냥 외우기 힘듬(15청크)&lt;br>
+419/518/625/717/815 &amp;lt;- 외울만함(5청크)&lt;/p>
+&lt;h2 id="장기기억">장기기억&lt;/h2>
+&lt;p>용량 : 무제한&lt;br>
+지속시간 : 장기간(영구적)&lt;/p>
+&lt;p>해마가 단기기억에서 장기기억으로 부호화(인코딩)시킴&lt;/p>
+&lt;h2 id="효과적인-부호화-방법">효과적인 부호화 방법&lt;/h2>
+&lt;h3 id="유지시연">유지시연&lt;/h3>
+&lt;p>정보의 반복적 순환 - 단순 반복 기억&lt;/p>
+&lt;h3 id="정교화-시연">정교화 시연&lt;/h3>
+&lt;p>새 정보를 장기기억에 이미 저장된 정보와 연결하여 시연&lt;/p>
+&lt;p>419518625717815 &amp;lt;- 그냥 외우기 힘듬(15청크)&lt;br>
+419/518/625/717/815 &amp;lt;- 외울만함(5청크)&lt;/p>
+&lt;p>내 기억속 역사와 연결. 만약 역사 지식이 없으면 연결 불가.&lt;/p>
+&lt;h3 id="에빙하우스">에빙하우스&lt;/h3>
+&lt;p>에빙하우스 암송 효과 실험&lt;/p>
+&lt;p>무의미 철자 목록 기억 과제 :&lt;br>
+DFD, DFS, DFS ,JBC, CNB, CKX, HFS&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/psychology-5/amsong.png"
+width="227"
+height="222"
+srcset="https://icebluehalls.github.io/p/psychology-5/amsong_hu074b4530c64e263e00810bfd1846206c_5094_480x0_resize_box_3.png 480w, https://icebluehalls.github.io/p/psychology-5/amsong_hu074b4530c64e263e00810bfd1846206c_5094_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="102"
+data-flex-basis="245px"
+>&lt;/p>
+&lt;h2 id="부호화-구체성-원리">부호화 구체성 원리&lt;/h2>
+&lt;h3 id="상태-의존적-기억">상태-의존적 기억&lt;/h3>
+&lt;p>취했을 때 부호화한 정보는 취했을 때 기억난다.&lt;br>
+아플 때 부호화한 정보는 아플때 기억난다.&lt;/p>
+&lt;h3 id="기분-의존적-기억">기분-의존적 기억&lt;/h3>
+&lt;p>슬플 때 저장된 기억은 슬플때가 인출 단서가 되면서 잘 떠오른다.&lt;/p>
+&lt;h3 id="맥락-의존적-기억">맥락-의존적 기억&lt;/h3>
+&lt;p>스쿠버 다이버가 시험 공부를 물속에서 한다면 시험 볼때에도 물속에서 보면 지상보다 점수가 좋다.&lt;br>
+시험 공부도 집이 아닌 시험 보는 곳에서 공부하면 기억이 더 잘난다.&lt;/p>
+&lt;h2 id="인출">인출&lt;/h2>
+&lt;h3 id="회상">회상&lt;/h3>
+&lt;p>기억 속의 정보를 아무 단서 없이 인출(그냥 상상, 주관식)&lt;/p>
+&lt;h3 id="재인">재인&lt;/h3>
+&lt;p>단서 제시 후 기억 속 정보와 단서의 일치여부 판단(몽타주, 객관식)&lt;/p>
+&lt;h2 id="망각">망각&lt;/h2>
+&lt;h3 id="부호화-실패-이론">부호화 실패 이론&lt;/h3>
+&lt;p>집중하지 않으면 감각기억에서 금방 빠져나가서 기억나지 않는다.&lt;br>
+동전의 세세한 부분까지 기억하지 못해 진짜 동전을 찾으라고 하면 못찾을 수도 있다.&lt;/p>
+&lt;h3 id="저장-소멸-이론">저장 소멸 이론&lt;/h3>
+&lt;p>정보가 시간이 지날수록 점차 소멸되고, 결국 기억 흔적이 소멸되어 사용할 수 없으므로 망각한다.&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/psychology-5/amsong2.png"
+width="450"
+height="280"
+srcset="https://icebluehalls.github.io/p/psychology-5/amsong2_hu11e0327491532489c235be79d49c182c_26827_480x0_resize_box_3.png 480w, https://icebluehalls.github.io/p/psychology-5/amsong2_hu11e0327491532489c235be79d49c182c_26827_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="에빙하우스 망각곡선"
+class="gallery-image"
+data-flex-grow="160"
+data-flex-basis="385px"
+>&lt;/p>
+&lt;p>대처법 : 복습해라&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/psychology-5/amsong3.jpg"
+width="668"
+height="371"
+srcset="https://icebluehalls.github.io/p/psychology-5/amsong3_hu3ab41721e2434611e2ed60cc88764a7e_45807_480x0_resize_q75_box.jpg 480w, https://icebluehalls.github.io/p/psychology-5/amsong3_hu3ab41721e2434611e2ed60cc88764a7e_45807_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="반복"
+class="gallery-image"
+data-flex-grow="180"
+data-flex-basis="432px"
+>&lt;/p>
+&lt;h3 id="간섭-이론">간섭 이론&lt;/h3>
+&lt;h4 id="순행간섭">순행간섭&lt;/h4>
+&lt;p>과거 학습이 새로운 정보의 회상을 방해&lt;/p>
+&lt;p>옛 집 주소는 기억이 나는데 새로운 집 주소가 기억이 안나네&amp;hellip;&lt;/p>
+&lt;h4 id="역행간섭">역행간섭&lt;/h4>
+&lt;p>새로운 학습이 기존 정보의 회상을 방해&lt;/p>
+&lt;p>지금 집 주소는 기억이 나는데 옛날 집 주소가 기억이 안나네&amp;hellip;&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/psychology-5/gansub.png"
+width="330"
+height="153"
+srcset="https://icebluehalls.github.io/p/psychology-5/gansub_huc9a854d8f80b695135a99fdb89f3c27e_2069_480x0_resize_box_3.png 480w, https://icebluehalls.github.io/p/psychology-5/gansub_huc9a854d8f80b695135a99fdb89f3c27e_2069_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="자유 회상 과제에서 계열 위치 곡선"
+class="gallery-image"
+data-flex-grow="215"
+data-flex-basis="517px"
+>&lt;/p>
+&lt;h3 id="즉시-회상-지연회상">즉시 회상, 지연회상&lt;/h3>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/psychology-5/gansub2.png"
+width="657"
+height="464"
+srcset="https://icebluehalls.github.io/p/psychology-5/gansub2_hu7da048991a93b69d96b5460ad0c787c1_159041_480x0_resize_box_3.png 480w, https://icebluehalls.github.io/p/psychology-5/gansub2_hu7da048991a93b69d96b5460ad0c787c1_159041_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="즉시 회상과 지연 회상에서 계열위치효과"
+class="gallery-image"
+data-flex-grow="141"
+data-flex-basis="339px"
+>&lt;/p>
+&lt;p>나는 가수다에서 7명이 노래하고 1위를 투표한다.&lt;br>
+마지막 가수가 끝나자마자 바로 투표를 실시하면 순행간섭이 일어나서 앞부분은 기억이 안나고, 마지막 가수만 단기기억과 함께 기억이 잘난다.&lt;br>
+마지막 사람이 뽑히는 경우가 많다.&lt;/p>
+&lt;p>발표를 기억에 남기고 싶으면 평가가 모든 발표 이후 즉시라면 후반에, 모든 발표 이후 일주일 뒤라면 집중력이 향상된 초반부에 하는 것을 추천.&lt;/p>
+&lt;h3 id="단서-의존이론">단서-의존이론&lt;/h3>
+&lt;p>정보가 전달되어 있지만, 찾지 못해서 인출하지 못함.&lt;br>
+설단 현상(아 그.. 거시기..그거)&lt;/p>
+&lt;h2 id="망각하지-않으려면">망각하지 않으려면?&lt;/h2>
+&lt;p>&lt;strong>부호화 실패 이론&lt;/strong> : 철처히 부호화(집중)하자&lt;/p>
+&lt;p>&lt;strong>저장 소멸 이론&lt;/strong> : 정기적으로 회상(복습)하자&lt;/p>
+&lt;p>&lt;strong>간섭 이론&lt;/strong> : 간섭을 최소화(중간 공부 자제)하자&lt;/p>
+&lt;p>&lt;strong>단서-의존 이론&lt;/strong> : &lt;strong>인출 단서&lt;/strong>를 많이 만들자&lt;/p>
+&lt;h2 id="기억-왜곡">기억 왜곡&lt;/h2>
+&lt;h3 id="도식">도식&lt;/h3>
+&lt;p>사람, 사건, 사물 행동 등에 대한 개인이 지닌 지식의 틀&lt;br>
+도식은 정보의 부호화와 인출에 영향을 미친다.&lt;/p>
+&lt;p>강아지를 떠올려도 사람마다 강아지의 종류가 다르다.
+일종의 일반화된 기억이라고 할 수 있다.&lt;/p>
+&lt;h3 id="후속-정보">후속 정보&lt;/h3>
+&lt;p>자동차가 접촉했을 때 얼마나 달렸어요? : 30km요&lt;br>
+자동차가 충돌했을 때 얼마나 달렸어요? : 40km요&lt;/p>
+&lt;p>깨진 유리창을 보았나요?&lt;br>
+접촉 : 14% YES
+충돌 : 32% YES&lt;/p>
+&lt;p>기억의 애매한 부분이 후속정보에 의해 왜곡되는 현상.&lt;/p>
+&lt;h2 id="기억-1">기억&lt;/h2>
+&lt;p>기억은 사실만 있는 것이 아니며 부족한 부분을 본인의 상상력이 채울 수도 있다.&lt;/p></description></item><item><title>심리학 강의 4강 - 학습</title><link>https://icebluehalls.github.io/p/psychology-4/</link><pubDate>Sat, 25 Mar 2023 00:00:00 +0000</pubDate><guid>https://icebluehalls.github.io/p/psychology-4/</guid><description>&lt;h1 id="학습">학습&lt;/h1>
+&lt;h2 id="학습의-정의">학습의 정의&lt;/h2>
+&lt;p>학습 : 경험을 통해 얻은 행동과 지식의 비교적 영속적인 변화&lt;/p>
+&lt;h2 id="고전적-조건형성이론">고전적 조건형성이론&lt;/h2>
+&lt;p>Pavlov의 고전적 조건형성 실험&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/psychology-4/pavlov1.png"
+width="880"
+height="370"
+srcset="https://icebluehalls.github.io/p/psychology-4/pavlov1_hu8782313fc9f923e6c20bc27e44e0835c_230748_480x0_resize_box_3.png 480w, https://icebluehalls.github.io/p/psychology-4/pavlov1_hu8782313fc9f923e6c20bc27e44e0835c_230748_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="파블로프의 개 실험"
+class="gallery-image"
+data-flex-grow="237"
+data-flex-basis="570px"
+>&lt;/p>
+&lt;h3 id="기본원리">기본원리&lt;/h3>
+&lt;p>음식(무조건 자극) -&amp;gt; 침(무조건 반응)&lt;br>
+UCS(Unconditioned Stlmulus) -&amp;gt; UCR(Unconditioned Response)&lt;/p>
+&lt;p>음식(무조건 자극) + 종소리(중립/조건 자극)&lt;br>
+UCS와 NS(중립 자극)/CS 연합&lt;br>
+(종소리는 기존에는 반응하지 않음)&lt;/p>
+&lt;p>종소리(조건 자극) -&amp;gt; 침(조건 반응)&lt;br>
+CS(Conditioned Stimulus) -&amp;gt; CR(Conditioned Response)&lt;/p>
+&lt;p>음식 = 종소리와 동일시 되면서 음식과 같은 자극이 된것&lt;/p>
+&lt;p>학교 공포증 :&lt;br>
+구타 폭행 -&amp;gt; 공포 &lt;br>
+구타 폭행 = 학교&lt;br>
+학교 -&amp;gt; 공포&lt;/p>
+&lt;h3 id="획득소거자발적-회복">획득,소거,자발적 회복&lt;/h3>
+&lt;p>획득 : 조건자극(CS)에 대해 새로운 반응(CR)을 얻는 것&lt;/p>
+&lt;p>소거 : 무조건 자극(UCS)없이 &lt;strong>조건 자극(CS)만&lt;/strong> 반복될 때, 조건 자극(CS)에 대한 조건 반응(CR)이 줄어드는 것.&lt;br>
+(구타 없이 학교만 다니면 학교의 공포는 점점 없어진다.)&lt;/p>
+&lt;p>자발적 회복 : 소거 진행 동안 휴식을 가진 후 조건 반응(CR)의 강도가 부분적으로 회복되는 것.&lt;br>
+(여름 방학 지나고 갑자기 등교에 대한 공포감이 살짝 드는 것)&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/psychology-4/pavlov2.png"
+width="715"
+height="439"
+srcset="https://icebluehalls.github.io/p/psychology-4/pavlov2_huec8d6373e540139535d03d9f6ccd62f3_141309_480x0_resize_box_3.png 480w, https://icebluehalls.github.io/p/psychology-4/pavlov2_huec8d6373e540139535d03d9f6ccd62f3_141309_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="자발적 회복 그래프"
+class="gallery-image"
+data-flex-grow="162"
+data-flex-basis="390px"
+>&lt;/p>
+&lt;h3 id="watson의-정서-조건형성">Watson의 정서 조건형성&lt;/h3>
+&lt;p>Watson 왈 : 나에게 건강한 아이를 맡긴다면 변호사, 예술가, 거지와 도둑까지 되게 할 수 있다.&lt;br>
+(행동주의)&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/psychology-4/watson.jpg"
+width="300"
+height="168"
+srcset="https://icebluehalls.github.io/p/psychology-4/watson_hu71880539a2b584f9ada913c24fc5b752_5863_480x0_resize_q75_box.jpg 480w, https://icebluehalls.github.io/p/psychology-4/watson_hu71880539a2b584f9ada913c24fc5b752_5863_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="watson의 쥐 실험"
+class="gallery-image"
+data-flex-grow="178"
+data-flex-basis="428px"
+>&lt;/p>
+&lt;ol>
+&lt;li>처음에는 아기가 쥐를 무서워하지 않는다.&lt;/li>
+&lt;li>쥐가 있을때마다 큰소리를 내서 아기를 무서워하게 한다.&lt;/li>
+&lt;li>이후에는 쥐만 나타나도 아기가 무서워한다.&lt;/li>
+&lt;/ol>
+&lt;h3 id="자극일반화와-변별">자극일반화와 변별&lt;/h3>
+&lt;h4 id="자극일반화">자극일반화&lt;/h4>
+&lt;p>CS(쥐)와 유사한 자극에 대해서 CR을 일으키는 현상
+제시되는 자극이 CS와 유사할수록 CR의 강도가 강함&lt;/p>
+&lt;p>위 실험에서 쥐 대신 쥐와 비슷한 아르마딜로, 쿼카, 토끼등으로 바꾸어도 똑같이 무서워하는 반응이 나올 수 있다.&lt;br>
+다만 토끼, 털뭉치등은 자극이 유사하지 않아 CR의 강도가 약할 수 있다.&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/psychology-4/watson2.png"
+width="581"
+height="323"
+srcset="https://icebluehalls.github.io/p/psychology-4/watson2_hu20114d0d17dcb6810dab90034f7600cc_94316_480x0_resize_box_3.png 480w, https://icebluehalls.github.io/p/psychology-4/watson2_hu20114d0d17dcb6810dab90034f7600cc_94316_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="179"
+data-flex-basis="431px"
+>&lt;/p>
+&lt;h4 id="자극변별">자극변별&lt;/h4>
+&lt;p>CS에 대해서만 CR이 나타나고 CS와 유사한 자극에 대해서는 CR이 나타나지 않음.&lt;br>
+CS에는 UCS가 뒤따르고, 유사 자극에는 UCS가 뒤따르지 않을 때 발생.&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/psychology-4/watson3.png"
+width="849"
+height="290"
+srcset="https://icebluehalls.github.io/p/psychology-4/watson3_hu1751cdf6c7b307148334f46732ba0693_223197_480x0_resize_box_3.png 480w, https://icebluehalls.github.io/p/psychology-4/watson3_hu1751cdf6c7b307148334f46732ba0693_223197_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="292"
+data-flex-basis="702px"
+>&lt;/p>
+&lt;h2 id="조작적-조건형성">조작적 조건형성&lt;/h2>
+&lt;p>만족스러운 결과를 가져오는 행동은 강화되고, 불만족스러운 결과를 가져오는 행동은 약해진다.&lt;/p>
+&lt;p>스키너 박스 : 버튼을 누르면 음식이 나오는 방에 쥐를 가뒀는데, 쥐가 버튼을 누르자 음식이 나오는 것을 보고 버튼만 누르기 시작했다.&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/psychology-4/skinner.jpg"
+width="700"
+height="700"
+srcset="https://icebluehalls.github.io/p/psychology-4/skinner_huae25a05496bdee86c7fb760426305baf_81828_480x0_resize_q75_box.jpg 480w, https://icebluehalls.github.io/p/psychology-4/skinner_huae25a05496bdee86c7fb760426305baf_81828_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="100"
+data-flex-basis="240px"
+>&lt;/p>
+&lt;h3 id="강화">강화&lt;/h3>
+&lt;p>행동의 결과로 행동의 빈도가 &lt;strong>증가&lt;/strong>하는 과정&lt;br>
+강화물 / 강화인 : 반응의 발생 가능성을 &lt;strong>증가&lt;/strong>시키는 자극(보상, 칭찬, 점수)&lt;/p>
+&lt;h4 id="정적-강화">정적 강화&lt;/h4>
+&lt;p>특정 행동 뒤에 &lt;strong>주어지는 자극&lt;/strong>으로 인해 행동 빈도가 &lt;strong>증가&lt;/strong>하는 과정&lt;br>
+(음식,칭찬,돈,학점,인정 등)&lt;/p>
+&lt;h4 id="부적-강화">부적 강화&lt;/h4>
+&lt;p>특정 행동 뒤에 &lt;strong>사라지는 자극&lt;/strong>으로 인해 이후 행동 빈도가 &lt;strong>증가&lt;/strong>하는 과정&lt;br>
+(과제 감소, 수업시간 단축 등 사라지는 보상)&lt;/p>
+&lt;h3 id="처벌">처벌&lt;/h3>
+&lt;p>행동의 결과로 행동의 빈도가 &lt;strong>감소&lt;/strong>하는 과정
+처벌제/처벌인 : 반응의 발생 가능성을 &lt;strong>감소&lt;/strong>시키는 자극(체벌, 반성문, 잔소리)&lt;/p>
+&lt;h4 id="정적-강화-1">정적 강화&lt;/h4>
+&lt;p>특정 행동 뒤에 &lt;strong>자극 제시&lt;/strong>로 인해 이후 행동 빈도가 &lt;strong>감소&lt;/strong>하는 과정&lt;br>
+(체벌,잔소리,반성문)&lt;/p>
+&lt;h4 id="부적-강화-1">부적 강화&lt;/h4>
+&lt;p>특정 행동 뒤에 &lt;strong>자극 제거&lt;/strong>로 인해 이후 행동 빈도가 &lt;strong>감소&lt;/strong>하는 과정&lt;br>
+(벌금, 타임아웃 등)&lt;/p>
+&lt;h3 id="조형">조형&lt;/h3>
+&lt;p>최종 목표 행동과 유사한 행동부터 강화하기 시작.&lt;br>
+빈도가 늘어나서 목표 행동에 더 가까운 행동이 발생하면 유사 행동를 중지하고, 최종 목표에 더 가까운 행동을 강화한다.&lt;br>
+(돌고래에게 물속에서 훌라우프 통과를 시키면 그 이후에는 수면 위에 훌라우프를 배치한다.)&lt;/p>
+&lt;h2 id="인지학습">인지학습&lt;/h2>
+&lt;h3 id="통찰학습">통찰학습&lt;/h3>
+&lt;p>본능적으로 학습하는 것.&lt;br>
+원숭이가 철창을 나오기 위해 도구를 사용하거나, 높은 곳에 올라가기 위해 주변 박스를 받침대로 사용하는 것.&lt;/p>
+&lt;h3 id="관찰학습">관찰학습&lt;/h3>
+&lt;p>사회 학습(알프레드 밴드러)&lt;br>
+아이에게 복싱 영상을 계속 보여주었더니 아이가 따라하기 시작.&lt;br>
+폭력적인 영화를 많이 보고 아이들이 패싸움을 하는 등.&lt;/p>
+&lt;p>관찰학습 4단계&lt;br>
+주의 &amp;gt; 회상 &amp;gt; 재생 &amp;gt; 동기&lt;/p></description></item><item><title>심리학 강의 3강 - 신경과학</title><link>https://icebluehalls.github.io/p/psychology-3/</link><pubDate>Sat, 18 Mar 2023 00:00:00 +0000</pubDate><guid>https://icebluehalls.github.io/p/psychology-3/</guid><description>&lt;h2 id="뉴런과-신경전달물질">뉴런과 신경전달물질&lt;/h2>
+&lt;h3 id="뉴런">뉴런&lt;/h3>
+&lt;p>뉴런 : 정보 전달(수상돌기, 세포체, 축색)
+교세포 : 뉴런 지지&lt;/p>
+&lt;p>뉴런 간 신호전달 : 화학적&lt;br>
+&lt;strong>핵심 : 신경전달물질&lt;/strong>&lt;/p>
+&lt;ol>
+&lt;li>뉴런에서 전기적 반응이 축색을 따라 종말 단추로 전도&lt;/li>
+&lt;li>동말 단추 도달 시, 스냅스 낭을 파열시켜 신경전달물질을 시냅스 간극으로 방출.&lt;/li>
+&lt;li>시냅스 공간으로 되돌아 온 신경전달물질 중 일부는 그 물질을 방출한 뉴런으로 흡수 나머지는 분해.&lt;/li>
+&lt;/ol>
+&lt;h3 id="신경전달물질">신경전달물질&lt;/h3>
+&lt;h4 id="도파민">도파민&lt;/h4>
+&lt;p>몸놀림 기능 :&lt;br>
+도파민 부족 시 정보 전달이 안되서 몸을 못 움직이는 파킨슨 병 발생 -&amp;gt; 도파민 합성재로 치료&lt;/p>
+&lt;p>각성, 기분, 사고 기능 :&lt;br>
+도파민 과다 시 정신분열증(조헌병) -&amp;gt; 도파민 대항제로 치료&lt;/p>
+&lt;h4 id="세로토닌">세로토닌&lt;/h4>
+&lt;p>기분, 각성, 수면, 섭십 기능&lt;br>
+부족시 우울 장애 - 세로토닌 작용제로 치료(햇빛과 반식욕도 세로토닌 채워줌)&lt;/p>
+&lt;h4 id="엔도르핀">엔도르핀&lt;/h4>
+&lt;p>쾌감, 통증 감소 기능
+Runner&amp;rsquo;s high, 위약 효과 시 방출 - 고통을 덜어주기 위해 엔도르핀 강제 활성(모르핀, 헤로인)&lt;/p>
+&lt;p>플라시보 혀과로 안 아프다 믿으면 실제로 엔도르핀이 나와 고통을 줄여주면서 안아프게 된다.&lt;/p>
+&lt;h2 id="신경계">신경계&lt;/h2>
+&lt;p>신경계&lt;/p>
+&lt;ul>
+&lt;li>중추신경계
+&lt;ul>
+&lt;li>뇌&lt;/li>
+&lt;li>척수 : 고통&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>말초신경계
+&lt;ul>
+&lt;li>체성 신경계 : 몸의 움직임 명령&lt;/li>
+&lt;li>자율 신경계 : 동공, 심장 멈추기, 정서&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="자율신경계">자율신경계&lt;/h2>
+&lt;p>정서를 조종(얼굴 근육)&lt;/p>
+&lt;ol>
+&lt;li>자율신경계의 생리적 흥분&lt;/li>
+&lt;li>신체 움직임, 얼굴 표정등 근육의 움직임&lt;/li>
+&lt;li>특정 정서를 느낀다는 의식&lt;/li>
+&lt;/ol>
+&lt;p>어느것이 먼저일까?&lt;/p>
+&lt;h3 id="안면-피드백-효과">안면 피드백 효과&lt;/h3>
+&lt;p>근육먼저설: 뇌는 얼굴근육에서 뇌로 전달되는 신호를 통해 자신이 어떤 정서를 경험하고 있는지 알아차린다.&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/psychology-3/feel1.png"
+width="755"
+height="381"
+srcset="https://icebluehalls.github.io/p/psychology-3/feel1_hu3d487cb101036b87ac662b5764683877_220793_480x0_resize_box_3.png 480w, https://icebluehalls.github.io/p/psychology-3/feel1_hu3d487cb101036b87ac662b5764683877_220793_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="198"
+data-flex-basis="475px"
+>&lt;/p>
+&lt;h3 id="정서의-두-요인-이론">정서의 두 요인 이론&lt;/h3>
+&lt;p>Schachter와 Singr의 두 요인 이론&lt;br>
+정서적 경험은 자신의 생리적 각성을인지적으로 어떻게 평가하느냐에 따라 결정된다.&lt;br>
+생리적 각성/흥분 + 인지적 평가&lt;/p>
+&lt;p>놀이기구와 사랑 모두 심장이 빨라진다는 공통점이 있지만 하나는 스릴을 즐긴다는 인식이, 하나는 사랑한다는 인식이 있어서 다른 정서가 된다.&lt;br>
+흔들다리 효과 : 심장이 뛴다는 조건이 있을 떄 정서가 착각하여 공포를 사랑으로 인식하는 경우도 있다.&lt;/p>
+&lt;h2 id="뇌">뇌&lt;/h2>
+&lt;p>뇌는 대뇌피질, 변연계, 중심핵으로 구성.&lt;/p>
+&lt;h3 id="중심핵뇌간">중심핵(뇌간)&lt;/h3>
+&lt;h4 id="연수">연수&lt;/h4>
+&lt;ul>
+&lt;li>생명유지기능(심장박동, 호흡)&lt;/li>
+&lt;li>좌우 신경 교차&lt;/li>
+&lt;/ul>
+&lt;h4 id="망상체">망상체&lt;/h4>
+&lt;ul>
+&lt;li>주의집중, 각성&lt;/li>
+&lt;li>고양이 망상체 자극 -&amp;gt; 각성, 제거 -&amp;gt; 혼수상태&lt;/li>
+&lt;/ul>
+&lt;h4 id="소뇌">소뇌&lt;/h4>
+&lt;ul>
+&lt;li>몸놀림, 균형감각, 운동학습(본능적인 근육 움직임)&lt;/li>
+&lt;/ul>
+&lt;h4 id="시상">시상&lt;/h4>
+&lt;ul>
+&lt;li>감각정보의 대뇌 전달&lt;/li>
+&lt;/ul>
+&lt;h4 id="기저핵">기저핵&lt;/h4>
+&lt;ul>
+&lt;li>신체움직임(파킨슨병, 알콜영향)&lt;/li>
+&lt;/ul>
+&lt;h3 id="변연계">변연계&lt;/h3>
+&lt;h4 id="시상하부">시상하부&lt;/h4>
+&lt;ul>
+&lt;li>기본 욕구 조절 : 먹기, 마시기, 성 행동 등&lt;/li>
+&lt;li>쾌락 중추&lt;/li>
+&lt;li>자극 시 하루종일 쾌락 추구&lt;/li>
+&lt;/ul>
+&lt;h4 id="헤미">헤미&lt;/h4>
+&lt;ul>
+&lt;li>기억을 담당&lt;/li>
+&lt;/ul>
+&lt;h3 id="편도체">편도체&lt;/h3>
+&lt;ul>
+&lt;li>정서 조절 : 공포, 분노, 공격성&lt;/li>
+&lt;li>편도체 제거 원숭이 -&amp;gt; 온순&lt;/li>
+&lt;li>편도체 자극 고양이 -&amp;gt; 공격 태세&lt;/li>
+&lt;li>해마는 편도체와 붙어있어서 공포나 화가 나는 기억은 잘 난다.&lt;/li>
+&lt;li>본능적 공포 또한 이런 편도체와 해마가 붙어있어서 발생.&lt;/li>
+&lt;/ul>
+&lt;h3 id="대뇌피질">대뇌피질&lt;/h3>
+&lt;ul>
+&lt;li>전두엽&lt;/li>
+&lt;li>두정엽&lt;/li>
+&lt;li>후두엽&lt;/li>
+&lt;li>측두엽&lt;/li>
+&lt;/ul>
+&lt;h4 id="체성감각피질">체성감각피질&lt;/h4>
+&lt;ul>
+&lt;li>입력을 담당&lt;/li>
+&lt;li>좌반구는 신체의 우측에서 입력을 받아들인다.&lt;/li>
+&lt;li>얼굴 - 엄지 - 손 - 팔 - 목 - 몸통 - 엉덩이 - 발가락 - 치아 - 잇몸 순으로 아프다.&lt;/li>
+&lt;/ul>
+&lt;h4 id="운동피질">운동피질&lt;/h4>
+&lt;ul>
+&lt;li>출력을 담당&lt;/li>
+&lt;li>좌반구는 신체의 우측을 통제한다.&lt;/li>
+&lt;li>얼굴 - 엄지 - 손 - 팔 - 목 - 몸통 - 엉덩이 - 발가락 - 치아 - 잇몸 순으로 정교하다.&lt;/li>
+&lt;/ul>
+&lt;p>왼손을 잡음 &amp;gt; 척수 &amp;gt; 대뇌피질 &amp;gt; 체성감각피질 &amp;gt; 우측 뇌 &amp;gt; 뿌리 쳐! &amp;gt; 운동 피질 &amp;gt; 우측 뇌 &amp;gt; 척수 &amp;gt; 왼쪽에 전달&lt;/p>
+&lt;h4 id="시각피질과-청각피질">시각피질과 청각피질&lt;/h4>
+&lt;p>후두엽이 다치면 눈이 안보일 수 있음.&lt;/p>
+&lt;h4 id="연합피질">연합피질&lt;/h4>
+&lt;ul>
+&lt;li>고등 동물일수록 연합영역이 증가&lt;/li>
+&lt;li>모든 고등 정신 활동(결정, 사고, 언어)는 연합피질에서 이루어진다.&lt;/li>
+&lt;li>전두엽 연합 피질이 손상될 경우 사고 능력과 결정 능력이 떨어지고 충동적으로 행동하는 사람이 발생.&lt;/li>
+&lt;/ul>
+&lt;h4 id="언어-관련-영역">언어 관련 영역&lt;/h4>
+&lt;p>&lt;strong>브로카 영역&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>언어 표현 기능&lt;/li>
+&lt;li>손상시 표현성 실어증(브로카 실어증)&lt;/li>
+&lt;li>손상시 말을 이상하게 함&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>베르니케 영역&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>언어 이해, 읽기 관련&lt;/li>
+&lt;li>손상시 수용성 실어증(베르니케 실언증)&lt;/li>
+&lt;li>말은 이상하지 않은데 내용이 이상함&lt;/li>
+&lt;/ul>
+&lt;h3 id="뇌량">뇌량&lt;/h3>
+&lt;p>좌반구와 우반구의 명령을 공유하는 고속도로 역할&lt;/p></description></item><item><title>인디 게임 한줄평</title><link>https://icebluehalls.github.io/p/playlist-indie/</link><pubDate>Fri, 17 Mar 2023 00:00:00 +0000</pubDate><guid>https://icebluehalls.github.io/p/playlist-indie/</guid><description>&lt;img src="https://icebluehalls.github.io/p/playlist-indie/title.png" alt="Featured image of post 인디 게임 한줄평" />&lt;p>&lt;img src="https://icebluehalls.github.io/p/playlist-indie/title.png"
 width="1486"
 height="836"
 srcset="https://icebluehalls.github.io/p/playlist-indie/title_hud97e264b989bb0fbc09fa653c02241b7_3050427_480x0_resize_box_3.png 480w, https://icebluehalls.github.io/p/playlist-indie/title_hud97e264b989bb0fbc09fa653c02241b7_3050427_1024x0_resize_box_3.png 1024w"
@@ -1248,6 +1892,138 @@ data-flex-basis="426px"
 &lt;p>GTA3&lt;/p>
 &lt;ul>
 &lt;li>7살 때 최초로 입문한 게임입니다. 그때는 PS2 개조판이 있어서 쿠키 같은 칩을 꽂으면 게임을 여러개 할 수 있었습니다. 영어를 몰라서 게임을 하나씩 켜보면서 락스타의 로고를 찾았었습니다. 아직도 락스타 로고가 나오면서 계란 깨지는 소리를 기억하고 있습니다.&lt;/li>
+&lt;/ul></description></item><item><title>심리학 강의 2강 - 심리학</title><link>https://icebluehalls.github.io/p/psychology-2/</link><pubDate>Sat, 11 Mar 2023 00:00:00 +0000</pubDate><guid>https://icebluehalls.github.io/p/psychology-2/</guid><description>&lt;h1 id="심리학">심리학&lt;/h1>
+&lt;p>심리학이란 &amp;ldquo;인간의 행동과 정신과정에 대한 과학적 연구&amp;rdquo;&lt;/p>
+&lt;h2 id="과학-이전의-인간-탐구">과학 이전의 인간 탐구&lt;/h2>
+&lt;p>플라토와 아리스토텔레스가 주도.&lt;/p>
+&lt;h2 id="구조주의">구조주의&lt;/h2>
+&lt;p>이전에는 철학의 한 부분으로서 과학적이지 못한 탐구방법으로 인간의 마음을 연구하여 까임.&lt;/p>
+&lt;h3 id="빌헬름-분트wilhelem-wundt">빌헬름 분트(Wilhelem Wundt)&lt;/h3>
+&lt;ul>
+&lt;li>1879년 최초의 심리학 실험실&lt;/li>
+&lt;li>정신의 구성요소와 내용&lt;/li>
+&lt;li>분석적 내성법&lt;/li>
+&lt;/ul>
+&lt;p>내성법이란 사람의 지각, 감정을 관찰하고 기록하는 것. 어떤 것에 대해 자신이 얼마나 무겁게 받아들이는지, 밝기는 얼마나 받은지에 대한 내용들.&lt;/p>
+&lt;h2 id="행동주의4강---학습">행동주의(4강 - 학습)&lt;/h2>
+&lt;p>심리학은 &amp;ldquo;관찰 가능한 &lt;strong>행동&lt;/strong>의 과학&amp;rdquo;&lt;/p>
+&lt;p>자극에 의한 반응 심리학&lt;/p>
+&lt;p>환경(경험)의 중요성 : 파블로프의 개실험, 왓슨의 쥐와 큰소리 실험, 스키너 박스의 쥐와 버튼음식 실험.&lt;/p>
+&lt;h2 id="인지적-접근">인지적 접근&lt;/h2>
+&lt;p>S(자극) -&amp;gt; 생각(마음) -&amp;gt; R(반응)
+지각에서 기억, 문제해결, 추리 등 고등 정신 과정까지 인지 과정이 작동하는 방식과 그 행동적 영향에 초점&lt;br>
+컴퓨터 사고와 동일.&lt;br>
+인지 능력은 연령에 따라 변화한다.&lt;/p>
+&lt;p>&lt;strong>인지발달적 접근(마음이론)&lt;/strong>&lt;br>
+자신이 생각하는 것과 타인이 생각하는 것이 다를 수 있다는 것을 인식하게 된다.&lt;/p>
+&lt;h2 id="정신분석적-접근6강---기억">정신분석적 접근(6강 - 기억)&lt;/h2>
+&lt;p>프로이트의 삶의 욕구와 죽음의 욕구, 무의식과 의식.&lt;/p>
+&lt;h2 id="인본주의적-접근7강---동기">인본주의적 접근(7강 - 동기)&lt;/h2>
+&lt;p>인간은 환경을 능동적으로 창조할 수 있다.&lt;/p>
+&lt;p>실존주의의 명제&lt;/p>
+&lt;ul>
+&lt;li>나는 &lt;strong>선택할 수 있는 존재&lt;/strong>이다.&lt;/li>
+&lt;li>나는 &lt;strong>절대 자유&lt;/strong>를 갖고 있다.&lt;/li>
+&lt;li>나는 &lt;strong>선택에 대해 책임&lt;/strong>질 수 있다.&lt;/li>
+&lt;/ul>
+&lt;p>로저스 &amp;amp; 매슬로&lt;/p>
+&lt;h2 id="신경생물학적-접근3장---신경과학">신경생물학적 접근(3장 - 신경과학)&lt;/h2>
+&lt;p>생물학적 견지에서 인간을 이해
+뇌, 신경계 및 기타 생물학적 기제가 행동과 정신과정을 유발하는 방식에 초점&lt;/p>
+&lt;h2 id="사회문화적-접근">사회문화적 접근&lt;/h2>
+&lt;p>타인의 문화적 환경이 인간의 행동과 정신에 미치는 영향에 초점&lt;/p>
+&lt;p>방관자 효과: 살인사건이 일어나도 38명의 목겨자가 30분동안 아무도 신고하지 않았다.&lt;/p>
+&lt;ul>
+&lt;li>사람들의 세계관이 문화의 영향을 받을까&lt;/li>
+&lt;li>사용하는 언어가 세상을 경험하는 방식에 영향을 미치는가?&lt;/li>
+&lt;li>아이들이 어른으로 성장하는데 문화가 어떻게 영향을 미치는가?&lt;/li>
+&lt;li>문화가 특정행동을 할 가능성에 영향을 미치는가?&lt;/li>
+&lt;li>문화가 감정을 표현하는 방식에 영향을 주는가?&lt;/li>
+&lt;li>문화가 심리적인 장애를 겪는 사람들의 비율에도 영향을 주는가?&lt;/li>
+&lt;/ul>
+&lt;h2 id="현대심리학적-관점들">현대심리학적 관점들&lt;/h2>
+&lt;p>각 관점은 상호배타적이 아니라 상호보안적이다.&lt;/p>
+&lt;p>사람의 존재 이유, 나의 존재이유 보다는 사람의 생각, 느낌, 행동과 그 이유를 이해하는데 심리학은 도움을 줄 것이다.&lt;/p></description></item><item><title>심리학 강의 1강 - 정리</title><link>https://icebluehalls.github.io/p/psychology-1/</link><pubDate>Sat, 04 Mar 2023 00:00:00 +0000</pubDate><guid>https://icebluehalls.github.io/p/psychology-1/</guid><description>&lt;h1 id="심리학">심리학&lt;/h1>
+&lt;p>다음 키워드들을 전부 설명할 수 있어야한다.&lt;/p>
+&lt;h2 id="2장---심리학-살펴보기">2장 - 심리학 살펴보기&lt;/h2>
+&lt;ul>
+&lt;li>과학 이전의 인간 탐구한 사람 2명&lt;/li>
+&lt;li>구조주의&lt;/li>
+&lt;li>행동주의&lt;/li>
+&lt;li>인지적 접근&lt;/li>
+&lt;li>정신분석적 접근&lt;/li>
+&lt;li>인본주의적 접근&lt;/li>
+&lt;li>신경생물학적 접근&lt;/li>
+&lt;li>사회문화적 접근&lt;/li>
+&lt;/ul>
+&lt;h2 id="3장---신경과학">3장 - 신경과학&lt;/h2>
+&lt;ul>
+&lt;li>뉴런이란(뉴런의 구성요소)&lt;/li>
+&lt;li>뉴런 간 신호전달 방법 설명&lt;/li>
+&lt;li>신경전달물질들에 대한 설명&lt;/li>
+&lt;li>신경계 조직도와 각 역할&lt;/li>
+&lt;li>자율신경계 역할&lt;/li>
+&lt;li>정서표현&lt;/li>
+&lt;li>같은 자율신경계 흥분에 대해서 다른 정서 인식하는지&lt;/li>
+&lt;li>뇌 구조&lt;/li>
+&lt;li>중심핵, 변연계, 대뇌피질, 언어 관련 영역, 뇌량&lt;/li>
+&lt;/ul>
+&lt;h2 id="4장---학습">4장 - 학습&lt;/h2>
+&lt;ul>
+&lt;li>학습이란&lt;/li>
+&lt;li>학습에서는 어떤 이론을 중점에 두는지&lt;/li>
+&lt;li>고전적 조건형성(의 기본 원리)&lt;/li>
+&lt;li>UCS - UCR&lt;/li>
+&lt;li>획득, 소거, 자발적 회복&lt;/li>
+&lt;li>Watson의 정서 조건형성&lt;/li>
+&lt;li>자극 일반화&lt;/li>
+&lt;li>자극 변별&lt;/li>
+&lt;li>Skinner의 조작적 조건형성&lt;/li>
+&lt;li>강화와 처벌&lt;/li>
+&lt;li>획득, 소거, 자발적 회복&lt;/li>
+&lt;li>조형&lt;/li>
+&lt;li>연합되는 법&lt;/li>
+&lt;li>통찰학습&lt;/li>
+&lt;li>관찰학습&lt;/li>
+&lt;/ul>
+&lt;h2 id="5장---기억">5장 - 기억&lt;/h2>
+&lt;ul>
+&lt;li>정보처리로서의 기억&lt;/li>
+&lt;li>정보처리 3단계&lt;/li>
+&lt;li>기억의 3단계 모형&lt;/li>
+&lt;li>감각기억, 단기기억, 장기기억&lt;/li>
+&lt;li>효과적인 부호화 방법(에빙하우스)&lt;/li>
+&lt;li>부호화 구체성 원리 3가지&lt;/li>
+&lt;li>인출 2가지&lt;/li>
+&lt;li>망각 이론 4가지 + 잊지 않는 방법&lt;/li>
+&lt;li>기억 왜곡 2가지&lt;/li>
+&lt;/ul>
+&lt;h2 id="6장---성격">6장 - 성격&lt;/h2>
+&lt;ul>
+&lt;li>성격이란&lt;/li>
+&lt;li>성격의 유전적 근원(연구 1개)&lt;/li>
+&lt;li>성격이론 중 과정이론 3개, 특성이론 2개&lt;/li>
+&lt;li>정신분석이론&lt;/li>
+&lt;li>정신세계의 구성요소, 본능 이론, 성격의 구조&lt;/li>
+&lt;li>방어기제 7가지&lt;/li>
+&lt;li>성격 형성의 중요 요소&lt;/li>
+&lt;li>심리성적 발달단계 5단계&lt;/li>
+&lt;li>프루이드 이론 평가&lt;/li>
+&lt;li>유형론, 특질이론&lt;/li>
+&lt;li>객관적 검사 방법, 투사적 검사 방법&lt;/li>
+&lt;/ul>
+&lt;h2 id="7장---동기">7장 - 동기&lt;/h2>
+&lt;ul>
+&lt;li>동기란&lt;/li>
+&lt;li>추동감소이론&lt;/li>
+&lt;li>유인이론&lt;/li>
+&lt;li>각성이론&lt;/li>
+&lt;li>심리적 동기&lt;/li>
+&lt;li>매슬로의 옥구 위계 이론&lt;/li>
+&lt;li>자기결정이론(기본심리적욕구)&lt;/li>
+&lt;li>내재적 동기와 외재적 동기&lt;/li>
+&lt;li>과잉정당화 효과&lt;/li>
+&lt;li>학습목표와 평가목표&lt;/li>
 &lt;/ul></description></item><item><title>16년 차 월급쟁이, 2년 만에 경제적 자유를 얻은 실천 독서법</title><link>https://icebluehalls.github.io/p/worker16/</link><pubDate>Thu, 23 Feb 2023 00:00:00 +0000</pubDate><guid>https://icebluehalls.github.io/p/worker16/</guid><description>&lt;img src="https://icebluehalls.github.io/p/worker16/main.png" alt="Featured image of post 16년 차 월급쟁이, 2년 만에 경제적 자유를 얻은 실천 독서법" />&lt;h1 id="이책을-읽은-이유">이책을 읽은 이유&lt;/h1>
 &lt;p>예전에 어른들이 성공하고 싶으면 책을 많이 읽으라고 말한 기억이 많다.
 하지만 나는 이것을 23살이 될때까지 한번도 실천한 기억이 없다.

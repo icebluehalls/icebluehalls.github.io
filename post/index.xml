@@ -1,4 +1,428 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on IceBlueHalls</title><link>https://icebluehalls.github.io/post/</link><description>Recent content in Posts on IceBlueHalls</description><generator>Hugo -- gohugo.io</generator><language>ko-kr</language><lastBuildDate>Sun, 23 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://icebluehalls.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>경영학원론 강의 개념모음집</title><link>https://icebluehalls.github.io/p/management-1/</link><pubDate>Sun, 23 Apr 2023 00:00:00 +0000</pubDate><guid>https://icebluehalls.github.io/p/management-1/</guid><description>&lt;h2 id="2장">2장&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on IceBlueHalls</title><link>https://icebluehalls.github.io/post/</link><description>Recent content in Posts on IceBlueHalls</description><generator>Hugo -- gohugo.io</generator><language>ko-kr</language><lastBuildDate>Sat, 20 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://icebluehalls.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>따라하기 제일 쉬운 Hugo로 블로그 만들기 #3</title><link>https://icebluehalls.github.io/p/etc/hugo/install3/</link><pubDate>Sat, 20 May 2023 00:00:00 +0000</pubDate><guid>https://icebluehalls.github.io/p/etc/hugo/install3/</guid><description>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install3/1.PNG" alt="Featured image of post 따라하기 제일 쉬운 Hugo로 블로그 만들기 #3" />&lt;h2 id="hugo-자동-배포-스크립트-추가">hugo 자동 배포 스크립트 추가&lt;/h2>
+&lt;p>![1.PNG]
+기존 hugo의 테마를 받은 깃 페이지에서 예시 파일로 제공되는 github &amp;gt; workflows에 있는 deploy.yml을 다운받습니다.&lt;/p>
+&lt;p>![2.PNG]
+myBlog에도 똑같이 .github &amp;gt; workflows에 해당 파일을 붙여넣습니다.&lt;/p>
+&lt;p>![3.PNG]
+해당 파일을 열고 아래 하단으로 내려갑니다.&lt;/p>
+&lt;p>![4.PNG]&lt;/p>
+&lt;p>하단에 Deploy 하는 방법을 설정할 수 있는데, 다음과 같이 설정합니다.&lt;/p>
+&lt;p>external_repository: {git 닉네임}/{git 블로그 주소}
+user_name: {git 닉네임}
+user_email: {git 이메일 아이디}
+public_branch: {깃 블로그 주소의 메인 브런치}&lt;/p>
+&lt;p>![5.PNG]
+블로그 내용을 자동 배포하려면 이 배포가 정상적인지 확인을 하는 깃허브 토큰이 필요합니다.&lt;/p>
+&lt;p>깃허브로 가서 우측 상단의 프로필을 클릭하여 Settings를 클릭합니다.&lt;/p>
+&lt;p>![6.PNG]
+스크롤을 제일 밑으로 내리면 Developer Settings를 클릭합니다.&lt;/p>
+&lt;p>![7.PNG]
+Personal access tokens를 클릭하고 우측 상단에 Generate new tokens를 클릭합니다.&lt;/p>
+&lt;p>![8.PNG]
+토큰의 이름은 HUGO로 설정합니다. 위 deploy.yml에서 토큰 이름이 secrets.HUGO로 되어있기 때문에 맞춰주어야합니다.&lt;/p>
+&lt;p>만료 날짜는 최대한 오래합니다. 토큰이 만료되면 재등록을 해야하는 귀차늠이 있습니다,&lt;/p>
+&lt;p>권한은 repo 하나만 추가해주어도 됩니다.&lt;/p>
+&lt;p>![9.PNG]
+토큰 생성이 완료되면 토큰 문자가 노출되는데 이것을 복사하여 다른 곳에 저장합니다. 이 페이지를 나오면 더는 볼 수 없기 때문에 다른 곳에 저장하는 것을 추천드립니다.&lt;/p>
+&lt;p>잊어버리면 재발급해야합니다.&lt;/p>
+&lt;p>![10.PNG]
+깃 블로그의 내용은 myblog에서 이루어지며, 해당 깃에 변화된 내용을 블로그 깃에 재배포하는 것이기 때문에 myblog에 토큰을 입력해야합니다.&lt;/p>
+&lt;p>myblog의 메뉴 중 Secrets and variables를 클릭합니다.&lt;/p>
+&lt;p>![11.PNG]
+초록 버튼 New repository secret을 클릭합니다.&lt;/p>
+&lt;p>![12.PNG]
+이름을 HUGO라고 지정합니다. 위 deploy.yml에서 토큰 이름이 secrets.HUGO로 되어있기 때문에 맞춰주어야합니다.&lt;/p>
+&lt;p>Secret은 복사했던 토큰 문자를 붙여넣습니다.&lt;/p>
+&lt;p>![13.PNG]
+토큰까지 깃허브 웹에서 설정이 완료되었다면 deploy.yml을 서버에 업로드해줍니다.(푸시해줍니다.)&lt;/p>
+&lt;p>![14.PNG]
+그리고 cotent/post/에 아무 md 파일이나 생성해보고 테스트로 업로드해봅니다.&lt;/p>
+&lt;p>![15.PNG]
+myBlog의 깃허브 웹에서 Actions을 보면 deploy.yml의 실행 결과를 확인할 수 있습니다.&lt;/p>
+&lt;p>![16.PNG]
+위에서 성공 표시가 나온다면 블로그 깃에서는 자동으로 커밋 및 푸시가 발생하는 것을 확인할 수 있습니다.&lt;/p>
+&lt;p>![17.PNG]
+다시 자신의 블로그로 가서 확인해보면 깃 블로그에서 자동으로 글이 업로드 되는 것을 볼 수 있습니다.&lt;/p></description></item><item><title>따라하기 제일 쉬운 Hugo로 블로그 만들기 #2</title><link>https://icebluehalls.github.io/p/etc/hugo/install2/</link><pubDate>Fri, 19 May 2023 00:00:00 +0000</pubDate><guid>https://icebluehalls.github.io/p/etc/hugo/install2/</guid><description>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install2/1.PNG" alt="Featured image of post 따라하기 제일 쉬운 Hugo로 블로그 만들기 #2" />&lt;h2 id="vscode로-콘텐츠-블로그-저장소-열기">VSCode로 콘텐츠 블로그 저장소 열기&lt;/h2>
+&lt;p>VSCode로 컴퓨터에 다운로드한 콘텐츠용 블로그 저장소를 엽니다.&lt;/p>
+&lt;p>이전 포스팅에서는 myBlog로 설정된 폴더입니다.&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install2/1.PNG"
+width="1536"
+height="1152"
+srcset="https://icebluehalls.github.io/p/etc/hugo/install2/1_hufaf53a29e89512644c1cc9295dd12c48_142592_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install2/1_hufaf53a29e89512644c1cc9295dd12c48_142592_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="133"
+data-flex-basis="320px"
+>
+&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install2/2.PNG"
+width="1536"
+height="1152"
+srcset="https://icebluehalls.github.io/p/etc/hugo/install2/2_hu93444bb7fdb42f978dffafa25f9e58d1_67104_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install2/2_hu93444bb7fdb42f978dffafa25f9e58d1_67104_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="133"
+data-flex-basis="320px"
+>&lt;/p>
+&lt;p>VSCode로 열 경우에는 VSCode 하단의 Terminal에서 해당 폴더에서부터 명령을 시작하도록 설정됩니다.&lt;/p>
+&lt;p>VSCode의 Terminal은 cmd로 가서 cd C:\Workspace\myBlog 를 호출한 것과 동일한 결과입니다.&lt;/p>
+&lt;h2 id="hugo-명령어로-블로그-생성">hugo 명령어로 블로그 생성&lt;/h2>
+&lt;h2 id="hugo-테마-다운로드">Hugo 테마 다운로드&lt;/h2>
+&lt;p>블로그의 꽃, 테마를 다운받아보겠습니다.&lt;/p>
+&lt;p>&lt;a class="link" href="https://themes.gohugo.io/" target="_blank" rel="noopener"
+>휴고 테마 공식 모음 사이트&lt;/a>에 접속합니다.&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install2/3.PNG"
+width="2052"
+height="1308"
+srcset="https://icebluehalls.github.io/p/etc/hugo/install2/3_hu9034109497bff03ded22068314afca23_674357_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install2/3_hu9034109497bff03ded22068314afca23_674357_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="156"
+data-flex-basis="376px"
+>&lt;/p>
+&lt;p>해당 예제에서는 Stack이라는 테마를 다운받았습니다.
+이외의 테마를 다운받는 것도 가능하지만 해당 블로그의 포스팅에서는 Stack을 기준으로 하였기 때문에 설정값이 달라 이후 진행이 힘드실 수 있습니다.&lt;/p>
+&lt;p>만약 처음 Hugo 블로그를 이용하신다면 먼저 Stack 테마로 테스트하시고 적응이 되시면 다른 테마로 변경하는 것을 추천드립니다.&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install2/4.PNG"
+width="2052"
+height="1308"
+srcset="https://icebluehalls.github.io/p/etc/hugo/install2/4_hu03d5d53a7d7ddff25f0f15b10ca36cc3_390414_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install2/4_hu03d5d53a7d7ddff25f0f15b10ca36cc3_390414_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="156"
+data-flex-basis="376px"
+>&lt;/p>
+&lt;p>Stack을 클릭하고 Download를 클릭합니다.&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install2/5.PNG"
+width="2052"
+height="1308"
+srcset="https://icebluehalls.github.io/p/etc/hugo/install2/5_hu087d252cca23afcbf594338ed1e3fd5a_253644_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install2/5_hu087d252cca23afcbf594338ed1e3fd5a_253644_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="156"
+data-flex-basis="376px"
+>&lt;/p>
+&lt;p>Download를 클릭하면 github로 이동이 되는데 해당 git을 클론하도록 주소를 복사합니다.&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install2/6.PNG"
+width="1539"
+height="1155"
+srcset="https://icebluehalls.github.io/p/etc/hugo/install2/6_hue373982ffcec345e20c133265f8e190e_99606_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install2/6_hue373982ffcec345e20c133265f8e190e_99606_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="133"
+data-flex-basis="319px"
+>&lt;/p>
+&lt;p>다시 VSCode로 돌아와 아래 Terminal에서 명령어 &lt;code>hugo site blog&lt;/code>를 입력합니다.&lt;/p>
+&lt;p>hugo가 성공적으로 설치되었다면 아래 영어가 주르륵 뜨면서 폴더 생성이 완료됩니다.&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install2/7.PNG"
+width="1050"
+height="792"
+srcset="https://icebluehalls.github.io/p/etc/hugo/install2/7_hua54d1feaf5e4fc3dada7eac7329eb4a5_57186_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install2/7_hua54d1feaf5e4fc3dada7eac7329eb4a5_57186_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="132"
+data-flex-basis="318px"
+>&lt;/p>
+&lt;p>해당 폴더 안에 hugo 명령어로 만든 blog가 생성되었는데 사실 생성된 blog의 위치는 한번 앞으로 와야합니다.&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install2/8.PNG"
+width="1050"
+height="792"
+srcset="https://icebluehalls.github.io/p/etc/hugo/install2/8_hu97b867fc64f5f9d643a4af9fa3220e8f_74981_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install2/8_hu97b867fc64f5f9d643a4af9fa3220e8f_74981_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="132"
+data-flex-basis="318px"
+>
+만들어진 blog의 모든 파일들을 blog 밖으로(.git 파일이 있는 곳) 이동합니다.&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install2/9.PNG"
+width="1050"
+height="792"
+srcset="https://icebluehalls.github.io/p/etc/hugo/install2/9_hu30d2f4dca32c3d401dff6a8ce0c992e9_79916_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install2/9_hu30d2f4dca32c3d401dff6a8ce0c992e9_79916_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="132"
+data-flex-basis="318px"
+>
+다 옮기면 blog는 빈폴더가 되는데 그냥 삭제해줍니다.&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install2/10.PNG"
+width="1542"
+height="1158"
+srcset="https://icebluehalls.github.io/p/etc/hugo/install2/10_hu47ff14b70170b21da97bd21948804ee9_129397_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install2/10_hu47ff14b70170b21da97bd21948804ee9_129397_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="133"
+data-flex-basis="319px"
+>
+깃허브 폴더로 전부 이동이 완료되었다면 이제는 휴고 블로그의 테마를 설치해볼 예정입니다.&lt;/p>
+&lt;p>다음 명령어로 내블로그에 서브모듈로 테마 블로그를 설치합니다.&lt;/p>
+&lt;p>git submodle add {git 주소} themes/{테마 이름}&lt;/p>
+&lt;p>git submodule add &lt;a class="link" href="https://github.com/CaiJimmy/hugo-theme-stack.git" target="_blank" rel="noopener"
+>https://github.com/CaiJimmy/hugo-theme-stack.git&lt;/a> themes/stack&lt;/p>
+&lt;p>그러면 gitmodules 파일에 명령어로 입력한 서브 모듈 깃주소가 등록됩니다.&lt;/p>
+&lt;p>간혹 자동으로 등록이 안되는데 이때에는 수동으로 등록합니다.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-v" data-lang="v">&lt;span class="line">&lt;span class="cl">&lt;span class="p">[&lt;/span>&lt;span class="na">submodule&lt;/span> &lt;span class="p">&amp;#34;&lt;/span>&lt;span class="s2">themes/stack&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">path&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nv">themes&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="nv">stack&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">url&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nv">https&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="c1">//github.com/CaiJimmy/hugo-theme-stack.git
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>![11.PNG]
+설치가 완료되면 themes 폴더에 서브 모듈로 등록한 폴더가 나오는데 안으로 들어가서 예제 코드들을 들고올 것입니다.&lt;/p>
+&lt;p>cotent 폴더와 config.yml을 복사합니다.&lt;/p>
+&lt;p>![12.PNG]
+myBlog 폴더에 붙여넣습니다.&lt;/p>
+&lt;p>![13.PNG]
+기존 myblog에 존재하던 config.toml은 삭제합니다.
+이때 복사하여 붙여넣은 config.yaml은 헷갈려서 삭제하시면 안됩니다.&lt;/p>
+&lt;p>![14.PNG]
+config.yaml을 엽니다.&lt;/p>
+&lt;p>![15.PNG]
+제일 첫째 줄에 위치한 블로그 정보들을 자신의 정보에 맞게 변경합니다.&lt;/p>
+&lt;p>baseurl: &amp;ldquo;https://{myblog와 함께 만들었던 블로그 주소}&amp;rdquo;
+languageCode: ko-KR
+theme: stack
+title: &amp;ldquo;원하는 블로그 이름&amp;rdquo;&lt;/p>
+&lt;p>![18.PNG]
+config.yaml의 설정이 완료되었으면 아래 terminal에서 hugo server -D 명령어를 입력합니다.&lt;/p>
+&lt;p>명렁어가 성공하면 아래처럼 http://localhost:1313/ 이라는 주소가 표시됩니다. 크롬이든 엣지이든 웹 브라우저를 이용해서 로컬호스트 주소로 이동합니다&lt;/p>
+&lt;p>![17.PNG]
+주소로 이동하면 테마가 적용된 자신의 블로그를 볼 수 있습니다.&lt;/p>
+&lt;p>![19.PNG]
+어느정도 블로그의 준비가 되었으니 이번에는 적용을 해볼 에정입니다.&lt;/p>
+&lt;p>git으로 가서 저장을 해볼텐데, 이전에 깃에 올라갈 필요가 없는 파일들은 gitignore에 등록합니다.&lt;/p>
+&lt;p>myblog에 resources 폴더를 ignore합니다.
+나머지 모두 stage해서 커밋 메세지를 작성하고 커밋합니다.&lt;/p>
+&lt;p>![20.PNG]
+만약 커밋이 안된다면 깃 프로그램의 메인 아이디를 설정하지 않은 것입니다.&lt;/p>
+&lt;p>![21.PNG]
+File &amp;gt; Settings &amp;gt; Git에서 글로벌 유저 정보를 입력합니다. 자신의 깃 닉네임과 깃 이메일 아이디를 입력하면 됩니다.&lt;/p>
+&lt;p>![22.PNG]
+깃 아이디까지 설정이 완료되고 커밋까지 되었다면 해당 깃을 서버로 푸시합니다.&lt;/p>
+&lt;h2 id="블로그에-올라가도록-서정">블로그에 올라가도록 서정&lt;/h2>
+&lt;p>![23.PNG]
+이번에는 myBlog에서 블로그 내용을 업로드하면 github.io로 된 깃 주소에 같이 업로드되서 블로그를 갱신하도록 만들 에정입니다.&lt;/p>
+&lt;p>myBlog에 연결하려면 브런치가 하나 생성되어야하므로, creating a new file을 누르고 temp.txt로 생성하여 아무 말이나 작성합니다.&lt;/p>
+&lt;p>![24.PNG]
+이런식으로 temp.txt가 추가된 것이 확인되었다면 해당 블로그 주소를 복사합니다.&lt;/p>
+&lt;p>![25.PNG]
+블로그 테마 주소를 서브모듈에 등록했던 것처럼 우리의 메인 git 블로그 주소도 연결시켜줍니다.&lt;/p>
+&lt;p>git submodule add -b main {블로그 주소} public 명령어를 입력합니다.&lt;/p>
+&lt;p>![26.PNG]
+만약 아래처럼 public이 이미 있다는 에러가 발생하면 public 폴더를 삭제한 후 다시 시도합니다.&lt;/p>
+&lt;p>![27.PNG]
+연결이 완료되었으면 .gitmodules에 등록이 되었는지 확인합니다. 없으면 그냥 입력해줍니다.&lt;/p>
+&lt;p>![28.PNG]
+hugo -D 명령어를 입력합니다.&lt;/p>
+&lt;p>![29.PNG]
+명령어가 촤르륵 나오는데 기다립니다.&lt;/p>
+&lt;p>명령어가 완료되었으면 cd public 명령어를 통해 public 폴더로 위치를 변경합니다.
+그리고 git push origin main 명령어를 입력하여 푸시합니다.&lt;/p>
+&lt;p>![30.PNG]
+명령어까지 성공하였다면 깃 프로그램에서 블로그 주소를 따로 추가하지 않았는데도 자신의 블로그가 업데이트 된 것을 볼 수 있습니다.&lt;/p>
+&lt;p>![31.PNG]
+웹 브라우저에 자신의 깃허브 블로그 주소를 직접 입력하면 블로그가 정상적으로 보여지는 것을 보실 수 있습니다.&lt;/p></description></item><item><title>따라하기 제일 쉬운 Hugo로 블로그 만들기 #1</title><link>https://icebluehalls.github.io/p/etc/hugo/install1/</link><pubDate>Thu, 18 May 2023 00:00:00 +0000</pubDate><guid>https://icebluehalls.github.io/p/etc/hugo/install1/</guid><description>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/10.PNG" alt="Featured image of post 따라하기 제일 쉬운 Hugo로 블로그 만들기 #1" />&lt;h2 id="1-github에서-레포지토리-생성">1. GitHub에서 레포지토리 생성&lt;/h2>
+&lt;p>레포지토리는 콘텐츠 저장용 하나, 보여지기 용 하나.&lt;br>
+총 2개의 레포짓토리가 생성됩니다.&lt;/p>
+&lt;ul>
+&lt;li>콘텐츠 저장용 : myBlog&lt;/li>
+&lt;li>보여지기용 : mntchocopsycho.github.io&lt;/li>
+&lt;/ul>
+&lt;h3 id="1-콘텐츠-저장용-블로그-레포지토리-생성">1. 콘텐츠 저장용 블로그 레포지토리 생성&lt;/h3>
+&lt;p>Github에서 새로운 respository를 생성합니다.
+&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/1.PNG"
+width="2052"
+height="1308"
+srcset="https://icebluehalls.github.io/p/etc/hugo/install1/1_hu029c5ad66ee79a28614d716a1eb62721_176608_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install1/1_hu029c5ad66ee79a28614d716a1eb62721_176608_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="156"
+data-flex-basis="376px"
+>&lt;/p>
+&lt;p>생성 시, 이름은 상관이 없으며 중요한 점은 Public으로 설정되어있어야합니다.
+&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/3.PNG"
+width="2052"
+height="1308"
+srcset="https://icebluehalls.github.io/p/etc/hugo/install1/3_hu60d467a353f66475914381c33969fee1_113948_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install1/3_hu60d467a353f66475914381c33969fee1_113948_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="156"
+data-flex-basis="376px"
+>&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/4.PNG"
+width="2052"
+height="1308"
+srcset="https://icebluehalls.github.io/p/etc/hugo/install1/4_hu7c24b3e161122bdc8062905ab78f0c92_99077_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install1/4_hu7c24b3e161122bdc8062905ab78f0c92_99077_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="156"
+data-flex-basis="376px"
+>&lt;/p>
+&lt;h3 id="2-보여지기용-블로그-레포지토리-생성">2. 보여지기용 블로그 레포지토리 생성&lt;/h3>
+&lt;p>콘텐츠용 블로그 레포지토리가 생성되었으면 이번에는 보여지기용(실제 URL) 레포지토리를 생성합니다.&lt;/p>
+&lt;p>여기 또한 public으로 설정해야 하며, 이름은 자신의 닉네임이 들어간 주소로 만들어야합니다.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">{블로그 이름}.github.io
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/5.PNG"
+width="2052"
+height="1308"
+srcset="https://icebluehalls.github.io/p/etc/hugo/install1/5_hu4e2af09d102b33ff7fb47667b3ace13c_117304_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install1/5_hu4e2af09d102b33ff7fb47667b3ace13c_117304_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="156"
+data-flex-basis="376px"
+>&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/6.PNG"
+width="2052"
+height="1308"
+srcset="https://icebluehalls.github.io/p/etc/hugo/install1/6_hu1e19337f6b5ae1e159c6d87f23a04fb1_107364_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install1/6_hu1e19337f6b5ae1e159c6d87f23a04fb1_107364_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="156"
+data-flex-basis="376px"
+>&lt;/p>
+&lt;h2 id="콘텐츠용-블로그-주소로-다운로드">콘텐츠용 블로그 주소로 다운로드&lt;/h2>
+&lt;p>myBlog 레포지토리에 들어가서 HTTPS로 된 git clone 주소를 복사합니다.&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/7.PNG"
+width="2052"
+height="1308"
+srcset="https://icebluehalls.github.io/p/etc/hugo/install1/7_hu29a6637b6a64fdd525a80660c1897f03_162325_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install1/7_hu29a6637b6a64fdd525a80660c1897f03_162325_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="156"
+data-flex-basis="376px"
+>&lt;/p>
+&lt;p>그리고 컴퓨터에 다운받습니다.(여기서는 Fork 라는 Git UI 프로그램을 사용했습니다.)&lt;/p>
+&lt;p>주소는 아무곳이나 상관없습니다.&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/8.PNG"
+width="2052"
+height="1308"
+srcset="https://icebluehalls.github.io/p/etc/hugo/install1/8_hu4397a82d36f8465860fdcad261c1b134_211498_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install1/8_hu4397a82d36f8465860fdcad261c1b134_211498_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="156"
+data-flex-basis="376px"
+>&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/9.PNG"
+width="2052"
+height="1308"
+srcset="https://icebluehalls.github.io/p/etc/hugo/install1/9_hu35e699938fbc0aa922ac93629d76195e_206397_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install1/9_hu35e699938fbc0aa922ac93629d76195e_206397_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="156"
+data-flex-basis="376px"
+>&lt;/p>
+&lt;h2 id="3-hugo-다운로드">3. Hugo 다운로드&lt;/h2>
+&lt;p>&lt;a class="link" href="https://gohugo.io/installation/" target="_blank" rel="noopener"
+>Hugo 다운로드 주소&lt;/a>에 접속합니다.&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/10.PNG"
+width="2052"
+height="1308"
+srcset="https://icebluehalls.github.io/p/etc/hugo/install1/10_hudc211de25df7a1149cde5d1bbe1a01ed_135908_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install1/10_hudc211de25df7a1149cde5d1bbe1a01ed_135908_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="156"
+data-flex-basis="376px"
+>&lt;/p>
+&lt;p>컴퓨터가 Windows 이므로 &lt;a class="link" href="https://gohugo.io/installation/windows/" target="_blank" rel="noopener"
+>Windows&lt;/a>를 클릭합니다.&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/11.PNG"
+width="2052"
+height="1308"
+srcset="https://icebluehalls.github.io/p/etc/hugo/install1/11_hu4c3b5321629363fc4a7520c4b5409561_142462_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install1/11_hu4c3b5321629363fc4a7520c4b5409561_142462_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="156"
+data-flex-basis="376px"
+>&lt;/p>
+&lt;p>Prebuilt Binaries에서 &lt;a class="link" href="https://github.com/gohugoio/hugo/releases/tag/v0.111.3" target="_blank" rel="noopener"
+>latest release&lt;/a>를 클릭하여 Hugo의 진짜 다운로드 페이지로 이동합니다.&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/12.PNG"
+width="2052"
+height="1308"
+srcset="https://icebluehalls.github.io/p/etc/hugo/install1/12_huc2f49550011baed309a831d9651c7d0a_181371_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install1/12_huc2f49550011baed309a831d9651c7d0a_181371_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="156"
+data-flex-basis="376px"
+>&lt;/p>
+&lt;p>제일 밑으로 스크롤을 내려 &lt;strong>hugo_extended_0.xxx_windows-amd64.zip&lt;/strong> 을 다운받습니다.&lt;/p>
+&lt;p>extended로 다운받는 이유는 일반 hugo로는 일부 테마에서는 scss(css 진화판)을 읽지 못해서 extended로 다운받았습니다.&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/13.PNG"
+width="2052"
+height="1308"
+srcset="https://icebluehalls.github.io/p/etc/hugo/install1/13_hucf29096e60d71505730d3ce1b29658a8_267152_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install1/13_hucf29096e60d71505730d3ce1b29658a8_267152_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="156"
+data-flex-basis="376px"
+>&lt;/p>
+&lt;p>&lt;code>C:\Program Files\Hugo&lt;/code>에 압축을 해제합니다.
+Hugo 폴더 안에 hugo.exe, LICENSE, README.md가 존재하면 됩니다.&lt;/p>
+&lt;h2 id="hugo-환경-변수-설정">Hugo 환경 변수 설정&lt;/h2>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/14.PNG"
+width="2052"
+height="1308"
+srcset="https://icebluehalls.github.io/p/etc/hugo/install1/14_hucf29096e60d71505730d3ce1b29658a8_850672_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install1/14_hucf29096e60d71505730d3ce1b29658a8_850672_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="156"
+data-flex-basis="376px"
+>
+Hugo를 cmd에서 호출하기 위해서는 환경 변수를 설정해야합니다.&lt;/p>
+&lt;p>제어판의 시스템 환경 변수 편집을 들어갑니다.&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/15.PNG"
+width="680"
+height="872"
+srcset="https://icebluehalls.github.io/p/etc/hugo/install1/15_hu4499c4f813b4102a0728a13bacf7c067_22739_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install1/15_hu4499c4f813b4102a0728a13bacf7c067_22739_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="77"
+data-flex-basis="187px"
+>
+시스템 설정에서 &lt;strong>환경 변수&lt;/strong>를 클릭합니다.&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/16.PNG"
+width="882"
+height="968"
+srcset="https://icebluehalls.github.io/p/etc/hugo/install1/16_hu686178c9bf6b8f96d68a522fff0838ca_40299_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install1/16_hu686178c9bf6b8f96d68a522fff0838ca_40299_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="91"
+data-flex-basis="218px"
+>
+시스템 변수의 Path를 클릭하여 편집을 클릭합니다.&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/17.PNG"
+width="752"
+height="827"
+srcset="https://icebluehalls.github.io/p/etc/hugo/install1/17_hu4d218cc1da85fe88f927ccff8b85927e_28308_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install1/17_hu4d218cc1da85fe88f927ccff8b85927e_28308_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="90"
+data-flex-basis="218px"
+>
+Hugo 폴더를 새로 추가합니다.(만약 다른 곳에 설치하였다면 해당 경로로 설장합니다.)&lt;/p>
+&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/18.PNG"
+width="1468"
+height="766"
+srcset="https://icebluehalls.github.io/p/etc/hugo/install1/18_hucdcc46bda1c4cff8ce66e30fb96d1221_19945_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install1/18_hucdcc46bda1c4cff8ce66e30fb96d1221_19945_1024x0_resize_box_3.PNG 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="191"
+data-flex-basis="459px"
+>
+설정이 완료되었다면 완료를 클릭하여 테스트를 실시해봅니다.&lt;/p>
+&lt;p>cmd를 열어서 hugo version을 입력해봅니다.&lt;br>
+Hugo의 버전을 알려주는 메세지가 나오면 성공한 것입니다.&lt;/p></description></item><item><title>경영학원론 강의 개념모음집</title><link>https://icebluehalls.github.io/p/management-1/</link><pubDate>Sun, 23 Apr 2023 00:00:00 +0000</pubDate><guid>https://icebluehalls.github.io/p/management-1/</guid><description>&lt;h2 id="2장">2장&lt;/h2>
 &lt;h3 id="경제학">경제학&lt;/h3>
 &lt;ul>
 &lt;li>자원을 어떻게 투입할 것인지&lt;/li>
@@ -471,431 +895,7 @@ data-flex-basis="531px"
 외제적도 가능하지만 내제적이 되기 위해 외제적을 개발하므로 돌아가는 방법이다.&lt;/p>
 &lt;h2 id="학습목표--평가목표">학습목표 &amp;amp; 평가목표&lt;/h2>
 &lt;p>&lt;strong>학습목표&lt;/strong> : 도전, 노력, 도전적 과제, 과정의 즐거움을 강조하는 환경,&lt;br>
-&lt;strong>평가목표&lt;/strong> : 포기, 좌절, 쉬운 과제, 점수 석차를 강조하는 환경, 지능 능력에 대한 칭찬&lt;/p></description></item><item><title>따라하기 제일 쉬운 Hugo로 블로그 만들기 #2</title><link>https://icebluehalls.github.io/p/etc/hugo/install2/</link><pubDate>Fri, 14 Apr 2023 00:00:00 +0000</pubDate><guid>https://icebluehalls.github.io/p/etc/hugo/install2/</guid><description>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install2/1.PNG" alt="Featured image of post 따라하기 제일 쉬운 Hugo로 블로그 만들기 #2" />&lt;h2 id="vscode로-콘텐츠-블로그-저장소-열기">VSCode로 콘텐츠 블로그 저장소 열기&lt;/h2>
-&lt;p>VSCode로 컴퓨터에 다운로드한 콘텐츠용 블로그 저장소를 엽니다.&lt;/p>
-&lt;p>이전 포스팅에서는 myBlog로 설정된 폴더입니다.&lt;/p>
-&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install2/1.PNG"
-width="1536"
-height="1152"
-srcset="https://icebluehalls.github.io/p/etc/hugo/install2/1_hufaf53a29e89512644c1cc9295dd12c48_142592_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install2/1_hufaf53a29e89512644c1cc9295dd12c48_142592_1024x0_resize_box_3.PNG 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="133"
-data-flex-basis="320px"
->
-&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install2/2.PNG"
-width="1536"
-height="1152"
-srcset="https://icebluehalls.github.io/p/etc/hugo/install2/2_hu93444bb7fdb42f978dffafa25f9e58d1_67104_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install2/2_hu93444bb7fdb42f978dffafa25f9e58d1_67104_1024x0_resize_box_3.PNG 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="133"
-data-flex-basis="320px"
->&lt;/p>
-&lt;p>VSCode로 열 경우에는 VSCode 하단의 Terminal에서 해당 폴더에서부터 명령을 시작하도록 설정됩니다.&lt;/p>
-&lt;p>VSCode의 Terminal은 cmd로 가서 cd C:\Workspace\myBlog 를 호출한 것과 동일한 결과입니다.&lt;/p>
-&lt;h2 id="hugo-명령어로-블로그-생성">hugo 명령어로 블로그 생성&lt;/h2>
-&lt;h2 id="hugo-테마-다운로드">Hugo 테마 다운로드&lt;/h2>
-&lt;p>블로그의 꽃, 테마를 다운받아보겠습니다.&lt;/p>
-&lt;p>&lt;a class="link" href="https://themes.gohugo.io/" target="_blank" rel="noopener"
->휴고 테마 공식 모음 사이트&lt;/a>에 접속합니다.&lt;/p>
-&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install2/3.PNG"
-width="2052"
-height="1308"
-srcset="https://icebluehalls.github.io/p/etc/hugo/install2/3_hu9034109497bff03ded22068314afca23_674357_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install2/3_hu9034109497bff03ded22068314afca23_674357_1024x0_resize_box_3.PNG 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="156"
-data-flex-basis="376px"
->&lt;/p>
-&lt;p>해당 예제에서는 Stack이라는 테마를 다운받았습니다.
-이외의 테마를 다운받는 것도 가능하지만 해당 블로그의 포스팅에서는 Stack을 기준으로 하였기 때문에 설정값이 달라 이후 진행이 힘드실 수 있습니다.&lt;/p>
-&lt;p>만약 처음 Hugo 블로그를 이용하신다면 먼저 Stack 테마로 테스트하시고 적응이 되시면 다른 테마로 변경하는 것을 추천드립니다.&lt;/p>
-&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install2/4.PNG"
-width="2052"
-height="1308"
-srcset="https://icebluehalls.github.io/p/etc/hugo/install2/4_hu03d5d53a7d7ddff25f0f15b10ca36cc3_390414_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install2/4_hu03d5d53a7d7ddff25f0f15b10ca36cc3_390414_1024x0_resize_box_3.PNG 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="156"
-data-flex-basis="376px"
->&lt;/p>
-&lt;p>Stack을 클릭하고 Download를 클릭합니다.&lt;/p>
-&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install2/5.PNG"
-width="2052"
-height="1308"
-srcset="https://icebluehalls.github.io/p/etc/hugo/install2/5_hu087d252cca23afcbf594338ed1e3fd5a_253644_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install2/5_hu087d252cca23afcbf594338ed1e3fd5a_253644_1024x0_resize_box_3.PNG 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="156"
-data-flex-basis="376px"
->&lt;/p>
-&lt;p>Download를 클릭하면 github로 이동이 되는데 해당 git을 클론하도록 주소를 복사합니다.&lt;/p>
-&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install2/6.PNG"
-width="1539"
-height="1155"
-srcset="https://icebluehalls.github.io/p/etc/hugo/install2/6_hue373982ffcec345e20c133265f8e190e_99606_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install2/6_hue373982ffcec345e20c133265f8e190e_99606_1024x0_resize_box_3.PNG 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="133"
-data-flex-basis="319px"
->&lt;/p>
-&lt;p>다시 VSCode로 돌아와 아래 Terminal에서 명령어 &lt;code>hugo site blog&lt;/code>를 입력합니다.&lt;/p>
-&lt;p>hugo가 성공적으로 설치되었다면 아래 영어가 주르륵 뜨면서 폴더 생성이 완료됩니다.&lt;/p>
-&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install2/7.PNG"
-width="1050"
-height="792"
-srcset="https://icebluehalls.github.io/p/etc/hugo/install2/7_hua54d1feaf5e4fc3dada7eac7329eb4a5_57186_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install2/7_hua54d1feaf5e4fc3dada7eac7329eb4a5_57186_1024x0_resize_box_3.PNG 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="132"
-data-flex-basis="318px"
->&lt;/p>
-&lt;p>해당 폴더 안에 hugo 명령어로 만든 blog가 생성되었는데 사실 생성된 blog의 위치는 한번 앞으로 와야합니다.&lt;/p>
-&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install2/8.PNG"
-width="1050"
-height="792"
-srcset="https://icebluehalls.github.io/p/etc/hugo/install2/8_hu97b867fc64f5f9d643a4af9fa3220e8f_74981_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install2/8_hu97b867fc64f5f9d643a4af9fa3220e8f_74981_1024x0_resize_box_3.PNG 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="132"
-data-flex-basis="318px"
->
-만들어진 blog의 모든 파일들을 blog 밖으로(.git 파일이 있는 곳) 이동합니다.&lt;/p>
-&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install2/9.PNG"
-width="1050"
-height="792"
-srcset="https://icebluehalls.github.io/p/etc/hugo/install2/9_hu30d2f4dca32c3d401dff6a8ce0c992e9_79916_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install2/9_hu30d2f4dca32c3d401dff6a8ce0c992e9_79916_1024x0_resize_box_3.PNG 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="132"
-data-flex-basis="318px"
->
-다 옮기면 blog는 빈폴더가 되는데 그냥 삭제해줍니다.&lt;/p>
-&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install2/10.PNG"
-width="1542"
-height="1158"
-srcset="https://icebluehalls.github.io/p/etc/hugo/install2/10_hu47ff14b70170b21da97bd21948804ee9_129397_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install2/10_hu47ff14b70170b21da97bd21948804ee9_129397_1024x0_resize_box_3.PNG 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="133"
-data-flex-basis="319px"
->
-깃허브 폴더로 전부 이동이 완료되었다면 이제는 휴고 블로그의 테마를 설치해볼 예정입니다.&lt;/p>
-&lt;p>다음 명령어로 내블로그에 서브모듈로 테마 블로그를 설치합니다.&lt;/p>
-&lt;p>git submodle add {git 주소} themes/{테마 이름}&lt;/p>
-&lt;p>git submodule add &lt;a class="link" href="https://github.com/CaiJimmy/hugo-theme-stack.git" target="_blank" rel="noopener"
->https://github.com/CaiJimmy/hugo-theme-stack.git&lt;/a> themes/stack&lt;/p>
-&lt;p>그러면 gitmodules 파일에 명령어로 입력한 서브 모듈 깃주소가 등록됩니다.&lt;/p>
-&lt;p>간혹 자동으로 등록이 안되는데 이때에는 수동으로 등록합니다.&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-v" data-lang="v">&lt;span class="line">&lt;span class="cl">&lt;span class="p">[&lt;/span>&lt;span class="na">submodule&lt;/span> &lt;span class="p">&amp;#34;&lt;/span>&lt;span class="s2">themes/stack&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">path&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nv">themes&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="nv">stack&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">url&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nv">https&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="c1">//github.com/CaiJimmy/hugo-theme-stack.git
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>![11.PNG]
-설치가 완료되면 themes 폴더에 서브 모듈로 등록한 폴더가 나오는데 안으로 들어가서 예제 코드들을 들고올 것입니다.&lt;/p>
-&lt;p>cotent 폴더와 config.yml을 복사합니다.&lt;/p>
-&lt;p>![12.PNG]
-myBlog 폴더에 붙여넣습니다.&lt;/p>
-&lt;p>![13.PNG]
-기존 myblog에 존재하던 config.toml은 삭제합니다.
-이때 복사하여 붙여넣은 config.yaml은 헷갈려서 삭제하시면 안됩니다.&lt;/p>
-&lt;p>![14.PNG]
-config.yaml을 엽니다.&lt;/p>
-&lt;p>![15.PNG]
-제일 첫째 줄에 위치한 블로그 정보들을 자신의 정보에 맞게 변경합니다.&lt;/p>
-&lt;p>baseurl: &amp;ldquo;https://{myblog와 함께 만들었던 블로그 주소}&amp;rdquo;
-languageCode: ko-KR
-theme: stack
-title: &amp;ldquo;원하는 블로그 이름&amp;rdquo;&lt;/p>
-&lt;p>![18.PNG]
-config.yaml의 설정이 완료되었으면 아래 terminal에서 hugo server -D 명령어를 입력합니다.&lt;/p>
-&lt;p>명렁어가 성공하면 아래처럼 http://localhost:1313/ 이라는 주소가 표시됩니다. 크롬이든 엣지이든 웹 브라우저를 이용해서 로컬호스트 주소로 이동합니다&lt;/p>
-&lt;p>![17.PNG]
-주소로 이동하면 테마가 적용된 자신의 블로그를 볼 수 있습니다.&lt;/p>
-&lt;p>![19.PNG]
-어느정도 블로그의 준비가 되었으니 이번에는 적용을 해볼 에정입니다.&lt;/p>
-&lt;p>git으로 가서 저장을 해볼텐데, 이전에 깃에 올라갈 필요가 없는 파일들은 gitignore에 등록합니다.&lt;/p>
-&lt;p>myblog에 resources 폴더를 ignore합니다.
-나머지 모두 stage해서 커밋 메세지를 작성하고 커밋합니다.&lt;/p>
-&lt;p>![20.PNG]
-만약 커밋이 안된다면 깃 프로그램의 메인 아이디를 설정하지 않은 것입니다.&lt;/p>
-&lt;p>![21.PNG]
-File &amp;gt; Settings &amp;gt; Git에서 글로벌 유저 정보를 입력합니다. 자신의 깃 닉네임과 깃 이메일 아이디를 입력하면 됩니다.&lt;/p>
-&lt;p>![22.PNG]
-깃 아이디까지 설정이 완료되고 커밋까지 되었다면 해당 깃을 서버로 푸시합니다.&lt;/p>
-&lt;h2 id="블로그에-올라가도록-서정">블로그에 올라가도록 서정&lt;/h2>
-&lt;p>![23.PNG]
-이번에는 myBlog에서 블로그 내용을 업로드하면 github.io로 된 깃 주소에 같이 업로드되서 블로그를 갱신하도록 만들 에정입니다.&lt;/p>
-&lt;p>myBlog에 연결하려면 브런치가 하나 생성되어야하므로, creating a new file을 누르고 temp.txt로 생성하여 아무 말이나 작성합니다.&lt;/p>
-&lt;p>![24.PNG]
-이런식으로 temp.txt가 추가된 것이 확인되었다면 해당 블로그 주소를 복사합니다.&lt;/p>
-&lt;p>![25.PNG]
-블로그 테마 주소를 서브모듈에 등록했던 것처럼 우리의 메인 git 블로그 주소도 연결시켜줍니다.&lt;/p>
-&lt;p>git submodule add -b main {블로그 주소} public 명령어를 입력합니다.&lt;/p>
-&lt;p>![26.PNG]
-만약 아래처럼 public이 이미 있다는 에러가 발생하면 public 폴더를 삭제한 후 다시 시도합니다.&lt;/p>
-&lt;p>![27.PNG]
-연결이 완료되었으면 .gitmodules에 등록이 되었는지 확인합니다. 없으면 그냥 입력해줍니다.&lt;/p>
-&lt;p>![28.PNG]
-hugo -D 명령어를 입력합니다.&lt;/p>
-&lt;p>![29.PNG]
-명령어가 촤르륵 나오는데 기다립니다.&lt;/p>
-&lt;p>명령어가 완료되었으면 cd public 명령어를 통해 public 폴더로 위치를 변경합니다.
-그리고 git push origin main 명령어를 입력하여 푸시합니다.&lt;/p>
-&lt;p>![30.PNG]
-명령어까지 성공하였다면 깃 프로그램에서 블로그 주소를 따로 추가하지 않았는데도 자신의 블로그가 업데이트 된 것을 볼 수 있습니다.&lt;/p>
-&lt;p>![31.PNG]
-웹 브라우저에 자신의 깃허브 블로그 주소를 직접 입력하면 블로그가 정상적으로 보여지는 것을 보실 수 있습니다.&lt;/p></description></item><item><title>따라하기 제일 쉬운 Hugo로 블로그 만들기 #3</title><link>https://icebluehalls.github.io/p/etc/hugo/install3/</link><pubDate>Thu, 13 Apr 2023 00:00:00 +0000</pubDate><guid>https://icebluehalls.github.io/p/etc/hugo/install3/</guid><description>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install3/1.PNG" alt="Featured image of post 따라하기 제일 쉬운 Hugo로 블로그 만들기 #3" />&lt;h2 id="hugo-자동-배포-스크립트-추가">hugo 자동 배포 스크립트 추가&lt;/h2>
-&lt;p>![1.PNG]
-기존 hugo의 테마를 받은 깃 페이지에서 예시 파일로 제공되는 github &amp;gt; workflows에 있는 deploy.yml을 다운받습니다.&lt;/p>
-&lt;p>![2.PNG]
-myBlog에도 똑같이 .github &amp;gt; workflows에 해당 파일을 붙여넣습니다.&lt;/p>
-&lt;p>![3.PNG]
-해당 파일을 열고 아래 하단으로 내려갑니다.&lt;/p>
-&lt;p>![4.PNG]&lt;/p>
-&lt;p>하단에 Deploy 하는 방법을 설정할 수 있는데, 다음과 같이 설정합니다.&lt;/p>
-&lt;p>external_repository: {git 닉네임}/{git 블로그 주소}
-user_name: {git 닉네임}
-user_email: {git 이메일 아이디}
-public_branch: {깃 블로그 주소의 메인 브런치}&lt;/p>
-&lt;p>![5.PNG]
-블로그 내용을 자동 배포하려면 이 배포가 정상적인지 확인을 하는 깃허브 토큰이 필요합니다.&lt;/p>
-&lt;p>깃허브로 가서 우측 상단의 프로필을 클릭하여 Settings를 클릭합니다.&lt;/p>
-&lt;p>![6.PNG]
-스크롤을 제일 밑으로 내리면 Developer Settings를 클릭합니다.&lt;/p>
-&lt;p>![7.PNG]
-Personal access tokens를 클릭하고 우측 상단에 Generate new tokens를 클릭합니다.&lt;/p>
-&lt;p>![8.PNG]
-토큰의 이름은 HUGO로 설정합니다. 위 deploy.yml에서 토큰 이름이 secrets.HUGO로 되어있기 때문에 맞춰주어야합니다.&lt;/p>
-&lt;p>만료 날짜는 최대한 오래합니다. 토큰이 만료되면 재등록을 해야하는 귀차늠이 있습니다,&lt;/p>
-&lt;p>권한은 repo 하나만 추가해주어도 됩니다.&lt;/p>
-&lt;p>![9.PNG]
-토큰 생성이 완료되면 토큰 문자가 노출되는데 이것을 복사하여 다른 곳에 저장합니다. 이 페이지를 나오면 더는 볼 수 없기 때문에 다른 곳에 저장하는 것을 추천드립니다.&lt;/p>
-&lt;p>잊어버리면 재발급해야합니다.&lt;/p>
-&lt;p>![10.PNG]
-깃 블로그의 내용은 myblog에서 이루어지며, 해당 깃에 변화된 내용을 블로그 깃에 재배포하는 것이기 때문에 myblog에 토큰을 입력해야합니다.&lt;/p>
-&lt;p>myblog의 메뉴 중 Secrets and variables를 클릭합니다.&lt;/p>
-&lt;p>![11.PNG]
-초록 버튼 New repository secret을 클릭합니다.&lt;/p>
-&lt;p>![12.PNG]
-이름을 HUGO라고 지정합니다. 위 deploy.yml에서 토큰 이름이 secrets.HUGO로 되어있기 때문에 맞춰주어야합니다.&lt;/p>
-&lt;p>Secret은 복사했던 토큰 문자를 붙여넣습니다.&lt;/p>
-&lt;p>![13.PNG]
-토큰까지 깃허브 웹에서 설정이 완료되었다면 deploy.yml을 서버에 업로드해줍니다.(푸시해줍니다.)&lt;/p>
-&lt;p>![14.PNG]
-그리고 cotent/post/에 아무 md 파일이나 생성해보고 테스트로 업로드해봅니다.&lt;/p>
-&lt;p>![15.PNG]
-myBlog의 깃허브 웹에서 Actions을 보면 deploy.yml의 실행 결과를 확인할 수 있습니다.&lt;/p>
-&lt;p>![16.PNG]
-위에서 성공 표시가 나온다면 블로그 깃에서는 자동으로 커밋 및 푸시가 발생하는 것을 확인할 수 있습니다.&lt;/p>
-&lt;p>![17.PNG]
-다시 자신의 블로그로 가서 확인해보면 깃 블로그에서 자동으로 글이 업로드 되는 것을 볼 수 있습니다.&lt;/p></description></item><item><title>따라하기 제일 쉬운 Hugo로 블로그 만들기 #1</title><link>https://icebluehalls.github.io/p/etc/hugo/install1/</link><pubDate>Wed, 12 Apr 2023 00:00:00 +0000</pubDate><guid>https://icebluehalls.github.io/p/etc/hugo/install1/</guid><description>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/10.PNG" alt="Featured image of post 따라하기 제일 쉬운 Hugo로 블로그 만들기 #1" />&lt;h2 id="1-github에서-레포지토리-생성">1. GitHub에서 레포지토리 생성&lt;/h2>
-&lt;p>레포지토리는 콘텐츠 저장용 하나, 보여지기 용 하나.&lt;br>
-총 2개의 레포짓토리가 생성됩니다.&lt;/p>
-&lt;ul>
-&lt;li>콘텐츠 저장용 : myBlog&lt;/li>
-&lt;li>보여지기용 : mntchocopsycho.github.io&lt;/li>
-&lt;/ul>
-&lt;h3 id="1-콘텐츠-저장용-블로그-레포지토리-생성">1. 콘텐츠 저장용 블로그 레포지토리 생성&lt;/h3>
-&lt;p>Github에서 새로운 respository를 생성합니다.
-&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/1.PNG"
-width="2052"
-height="1308"
-srcset="https://icebluehalls.github.io/p/etc/hugo/install1/1_hu029c5ad66ee79a28614d716a1eb62721_176608_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install1/1_hu029c5ad66ee79a28614d716a1eb62721_176608_1024x0_resize_box_3.PNG 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="156"
-data-flex-basis="376px"
->&lt;/p>
-&lt;p>생성 시, 이름은 상관이 없으며 중요한 점은 Public으로 설정되어있어야합니다.
-&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/3.PNG"
-width="2052"
-height="1308"
-srcset="https://icebluehalls.github.io/p/etc/hugo/install1/3_hu60d467a353f66475914381c33969fee1_113948_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install1/3_hu60d467a353f66475914381c33969fee1_113948_1024x0_resize_box_3.PNG 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="156"
-data-flex-basis="376px"
->&lt;/p>
-&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/4.PNG"
-width="2052"
-height="1308"
-srcset="https://icebluehalls.github.io/p/etc/hugo/install1/4_hu7c24b3e161122bdc8062905ab78f0c92_99077_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install1/4_hu7c24b3e161122bdc8062905ab78f0c92_99077_1024x0_resize_box_3.PNG 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="156"
-data-flex-basis="376px"
->&lt;/p>
-&lt;h3 id="2-보여지기용-블로그-레포지토리-생성">2. 보여지기용 블로그 레포지토리 생성&lt;/h3>
-&lt;p>콘텐츠용 블로그 레포지토리가 생성되었으면 이번에는 보여지기용(실제 URL) 레포지토리를 생성합니다.&lt;/p>
-&lt;p>여기 또한 public으로 설정해야 하며, 이름은 자신의 닉네임이 들어간 주소로 만들어야합니다.&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">{블로그 이름}.github.io
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/5.PNG"
-width="2052"
-height="1308"
-srcset="https://icebluehalls.github.io/p/etc/hugo/install1/5_hu4e2af09d102b33ff7fb47667b3ace13c_117304_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install1/5_hu4e2af09d102b33ff7fb47667b3ace13c_117304_1024x0_resize_box_3.PNG 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="156"
-data-flex-basis="376px"
->&lt;/p>
-&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/6.PNG"
-width="2052"
-height="1308"
-srcset="https://icebluehalls.github.io/p/etc/hugo/install1/6_hu1e19337f6b5ae1e159c6d87f23a04fb1_107364_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install1/6_hu1e19337f6b5ae1e159c6d87f23a04fb1_107364_1024x0_resize_box_3.PNG 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="156"
-data-flex-basis="376px"
->&lt;/p>
-&lt;h2 id="콘텐츠용-블로그-주소로-다운로드">콘텐츠용 블로그 주소로 다운로드&lt;/h2>
-&lt;p>myBlog 레포지토리에 들어가서 HTTPS로 된 git clone 주소를 복사합니다.&lt;/p>
-&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/7.PNG"
-width="2052"
-height="1308"
-srcset="https://icebluehalls.github.io/p/etc/hugo/install1/7_hu29a6637b6a64fdd525a80660c1897f03_162325_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install1/7_hu29a6637b6a64fdd525a80660c1897f03_162325_1024x0_resize_box_3.PNG 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="156"
-data-flex-basis="376px"
->&lt;/p>
-&lt;p>그리고 컴퓨터에 다운받습니다.(여기서는 Fork 라는 Git UI 프로그램을 사용했습니다.)&lt;/p>
-&lt;p>주소는 아무곳이나 상관없습니다.&lt;/p>
-&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/8.PNG"
-width="2052"
-height="1308"
-srcset="https://icebluehalls.github.io/p/etc/hugo/install1/8_hu4397a82d36f8465860fdcad261c1b134_211498_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install1/8_hu4397a82d36f8465860fdcad261c1b134_211498_1024x0_resize_box_3.PNG 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="156"
-data-flex-basis="376px"
->&lt;/p>
-&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/9.PNG"
-width="2052"
-height="1308"
-srcset="https://icebluehalls.github.io/p/etc/hugo/install1/9_hu35e699938fbc0aa922ac93629d76195e_206397_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install1/9_hu35e699938fbc0aa922ac93629d76195e_206397_1024x0_resize_box_3.PNG 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="156"
-data-flex-basis="376px"
->&lt;/p>
-&lt;h2 id="3-hugo-다운로드">3. Hugo 다운로드&lt;/h2>
-&lt;p>&lt;a class="link" href="https://gohugo.io/installation/" target="_blank" rel="noopener"
->Hugo 다운로드 주소&lt;/a>에 접속합니다.&lt;/p>
-&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/10.PNG"
-width="2052"
-height="1308"
-srcset="https://icebluehalls.github.io/p/etc/hugo/install1/10_hudc211de25df7a1149cde5d1bbe1a01ed_135908_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install1/10_hudc211de25df7a1149cde5d1bbe1a01ed_135908_1024x0_resize_box_3.PNG 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="156"
-data-flex-basis="376px"
->&lt;/p>
-&lt;p>컴퓨터가 Windows 이므로 &lt;a class="link" href="https://gohugo.io/installation/windows/" target="_blank" rel="noopener"
->Windows&lt;/a>를 클릭합니다.&lt;/p>
-&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/11.PNG"
-width="2052"
-height="1308"
-srcset="https://icebluehalls.github.io/p/etc/hugo/install1/11_hu4c3b5321629363fc4a7520c4b5409561_142462_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install1/11_hu4c3b5321629363fc4a7520c4b5409561_142462_1024x0_resize_box_3.PNG 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="156"
-data-flex-basis="376px"
->&lt;/p>
-&lt;p>Prebuilt Binaries에서 &lt;a class="link" href="https://github.com/gohugoio/hugo/releases/tag/v0.111.3" target="_blank" rel="noopener"
->latest release&lt;/a>를 클릭하여 Hugo의 진짜 다운로드 페이지로 이동합니다.&lt;/p>
-&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/12.PNG"
-width="2052"
-height="1308"
-srcset="https://icebluehalls.github.io/p/etc/hugo/install1/12_huc2f49550011baed309a831d9651c7d0a_181371_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install1/12_huc2f49550011baed309a831d9651c7d0a_181371_1024x0_resize_box_3.PNG 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="156"
-data-flex-basis="376px"
->&lt;/p>
-&lt;p>제일 밑으로 스크롤을 내려 &lt;strong>hugo_extended_0.xxx_windows-amd64.zip&lt;/strong> 을 다운받습니다.&lt;/p>
-&lt;p>extended로 다운받는 이유는 일반 hugo로는 일부 테마에서는 scss(css 진화판)을 읽지 못해서 extended로 다운받았습니다.&lt;/p>
-&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/13.PNG"
-width="2052"
-height="1308"
-srcset="https://icebluehalls.github.io/p/etc/hugo/install1/13_hucf29096e60d71505730d3ce1b29658a8_267152_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install1/13_hucf29096e60d71505730d3ce1b29658a8_267152_1024x0_resize_box_3.PNG 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="156"
-data-flex-basis="376px"
->&lt;/p>
-&lt;p>&lt;code>C:\Program Files\Hugo&lt;/code>에 압축을 해제합니다.
-Hugo 폴더 안에 hugo.exe, LICENSE, README.md가 존재하면 됩니다.&lt;/p>
-&lt;h2 id="hugo-환경-변수-설정">Hugo 환경 변수 설정&lt;/h2>
-&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/14.PNG"
-width="2052"
-height="1308"
-srcset="https://icebluehalls.github.io/p/etc/hugo/install1/14_hucf29096e60d71505730d3ce1b29658a8_850672_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install1/14_hucf29096e60d71505730d3ce1b29658a8_850672_1024x0_resize_box_3.PNG 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="156"
-data-flex-basis="376px"
->
-Hugo를 cmd에서 호출하기 위해서는 환경 변수를 설정해야합니다.&lt;/p>
-&lt;p>제어판의 시스템 환경 변수 편집을 들어갑니다.&lt;/p>
-&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/15.PNG"
-width="680"
-height="872"
-srcset="https://icebluehalls.github.io/p/etc/hugo/install1/15_hu4499c4f813b4102a0728a13bacf7c067_22739_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install1/15_hu4499c4f813b4102a0728a13bacf7c067_22739_1024x0_resize_box_3.PNG 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="77"
-data-flex-basis="187px"
->
-시스템 설정에서 &lt;strong>환경 변수&lt;/strong>를 클릭합니다.&lt;/p>
-&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/16.PNG"
-width="882"
-height="968"
-srcset="https://icebluehalls.github.io/p/etc/hugo/install1/16_hu686178c9bf6b8f96d68a522fff0838ca_40299_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install1/16_hu686178c9bf6b8f96d68a522fff0838ca_40299_1024x0_resize_box_3.PNG 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="91"
-data-flex-basis="218px"
->
-시스템 변수의 Path를 클릭하여 편집을 클릭합니다.&lt;/p>
-&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/17.PNG"
-width="752"
-height="827"
-srcset="https://icebluehalls.github.io/p/etc/hugo/install1/17_hu4d218cc1da85fe88f927ccff8b85927e_28308_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install1/17_hu4d218cc1da85fe88f927ccff8b85927e_28308_1024x0_resize_box_3.PNG 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="90"
-data-flex-basis="218px"
->
-Hugo 폴더를 새로 추가합니다.(만약 다른 곳에 설치하였다면 해당 경로로 설장합니다.)&lt;/p>
-&lt;p>&lt;img src="https://icebluehalls.github.io/p/etc/hugo/install1/18.PNG"
-width="1468"
-height="766"
-srcset="https://icebluehalls.github.io/p/etc/hugo/install1/18_hucdcc46bda1c4cff8ce66e30fb96d1221_19945_480x0_resize_box_3.PNG 480w, https://icebluehalls.github.io/p/etc/hugo/install1/18_hucdcc46bda1c4cff8ce66e30fb96d1221_19945_1024x0_resize_box_3.PNG 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="191"
-data-flex-basis="459px"
->
-설정이 완료되었다면 완료를 클릭하여 테스트를 실시해봅니다.&lt;/p>
-&lt;p>cmd를 열어서 hugo version을 입력해봅니다.&lt;br>
-Hugo의 버전을 알려주는 메세지가 나오면 성공한 것입니다.&lt;/p></description></item><item><title>[백문이불여일타] 데이터 분석을 위한 중급 SQL 강의 요약</title><link>https://icebluehalls.github.io/p/sql-study-normal/</link><pubDate>Mon, 10 Apr 2023 00:00:00 +0000</pubDate><guid>https://icebluehalls.github.io/p/sql-study-normal/</guid><description>&lt;img src="https://icebluehalls.github.io/p/sql-study-normal/main.png" alt="Featured image of post [백문이불여일타] 데이터 분석을 위한 중급 SQL 강의 요약" />&lt;h1 id="sql-중급">SQL 중급&lt;/h1>
+&lt;strong>평가목표&lt;/strong> : 포기, 좌절, 쉬운 과제, 점수 석차를 강조하는 환경, 지능 능력에 대한 칭찬&lt;/p></description></item><item><title>[백문이불여일타] 데이터 분석을 위한 중급 SQL 강의 요약</title><link>https://icebluehalls.github.io/p/sql-study-normal/</link><pubDate>Mon, 10 Apr 2023 00:00:00 +0000</pubDate><guid>https://icebluehalls.github.io/p/sql-study-normal/</guid><description>&lt;img src="https://icebluehalls.github.io/p/sql-study-normal/main.png" alt="Featured image of post [백문이불여일타] 데이터 분석을 위한 중급 SQL 강의 요약" />&lt;h1 id="sql-중급">SQL 중급&lt;/h1>
 &lt;h2 id="count">COUNT&lt;/h2>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -2325,71 +2325,7 @@ data-flex-basis="475px"
 &lt;li>말은 이상하지 않은데 내용이 이상함&lt;/li>
 &lt;/ul>
 &lt;h3 id="뇌량">뇌량&lt;/h3>
-&lt;p>좌반구와 우반구의 명령을 공유하는 고속도로 역할&lt;/p></description></item><item><title>인디 게임 한줄평</title><link>https://icebluehalls.github.io/p/playlist-indie/</link><pubDate>Fri, 17 Mar 2023 00:00:00 +0000</pubDate><guid>https://icebluehalls.github.io/p/playlist-indie/</guid><description>&lt;img src="https://icebluehalls.github.io/p/playlist-indie/title.png" alt="Featured image of post 인디 게임 한줄평" />&lt;p>&lt;img src="https://icebluehalls.github.io/p/playlist-indie/title.png"
-width="1486"
-height="836"
-srcset="https://icebluehalls.github.io/p/playlist-indie/title_hud97e264b989bb0fbc09fa653c02241b7_3050427_480x0_resize_box_3.png 480w, https://icebluehalls.github.io/p/playlist-indie/title_hud97e264b989bb0fbc09fa653c02241b7_3050427_1024x0_resize_box_3.png 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="177"
-data-flex-basis="426px"
->&lt;/p>
-&lt;p>[Chilla&amp;rsquo;s Art] The Karaoke | ヒトカラ
-[온파이어 게임즈] 러브 인 로그인
-IB&lt;/p>
-&lt;h1 id="2021">2021&lt;/h1>
-&lt;p>노비타의 바이오하자드&lt;/p>
-&lt;h1 id="2016">2016&lt;/h1>
-&lt;p>언더테일&lt;/p>
-&lt;h1 id="2015">2015&lt;/h1>
-&lt;p>프레디의 피자가게&lt;/p></description></item><item><title>인디 게임 한줄평</title><link>https://icebluehalls.github.io/p/playlist-mobile/</link><pubDate>Fri, 17 Mar 2023 00:00:00 +0000</pubDate><guid>https://icebluehalls.github.io/p/playlist-mobile/</guid><description>&lt;img src="https://icebluehalls.github.io/p/playlist-mobile/title.png" alt="Featured image of post 인디 게임 한줄평" />&lt;p>&lt;img src="https://icebluehalls.github.io/p/playlist-mobile/title.png"
-width="1486"
-height="836"
-srcset="https://icebluehalls.github.io/p/playlist-mobile/title_hud97e264b989bb0fbc09fa653c02241b7_3050427_480x0_resize_box_3.png 480w, https://icebluehalls.github.io/p/playlist-mobile/title_hud97e264b989bb0fbc09fa653c02241b7_3050427_1024x0_resize_box_3.png 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="177"
-data-flex-basis="426px"
->&lt;/p>
-&lt;p>확산성 밀리언 아서&lt;/p>
-&lt;h1 id="2021">2021&lt;/h1>
-&lt;p>카운터사이드&lt;/p>
-&lt;h1 id="2020">2020&lt;/h1>
-&lt;p>레전드 오브 룬테라&lt;/p>
-&lt;h1 id="2019">2019&lt;/h1>
-&lt;p>라스트오리진&lt;/p>
-&lt;h1 id="2017">2017&lt;/h1>
-&lt;p>뱅드림 : 걸즈앤드파티
-소녀전선&lt;/p>
-&lt;h1 id="2016">2016&lt;/h1>
-&lt;p>섀도우버스&lt;/p>
-&lt;h1 id="2013">~2013&lt;/h1>
-&lt;p>제노니아 3
-제노니아 4
-회색도시
-러브라이브 스쿨아이돌 페스티벌
-드래곤 플라이트
-템플런
-앵그리버드&lt;/p></description></item><item><title>인디 게임 한줄평</title><link>https://icebluehalls.github.io/p/playlist-online/</link><pubDate>Fri, 17 Mar 2023 00:00:00 +0000</pubDate><guid>https://icebluehalls.github.io/p/playlist-online/</guid><description>&lt;img src="https://icebluehalls.github.io/p/playlist-online/title.png" alt="Featured image of post 인디 게임 한줄평" />&lt;p>&lt;img src="https://icebluehalls.github.io/p/playlist-online/title.png"
-width="1486"
-height="836"
-srcset="https://icebluehalls.github.io/p/playlist-online/title_hud97e264b989bb0fbc09fa653c02241b7_3050427_480x0_resize_box_3.png 480w, https://icebluehalls.github.io/p/playlist-online/title_hud97e264b989bb0fbc09fa653c02241b7_3050427_1024x0_resize_box_3.png 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="177"
-data-flex-basis="426px"
->&lt;/p>
-&lt;p>클로저스
-오버워치
-원신
-이터널 리턴
-크레이지 아케이드
-메이플스토리
-워록
-로스트사가
-메이플스토리2
-에이펙스 레전드
-*&lt;/p></description></item><item><title>콘솔 게임 한줄평</title><link>https://icebluehalls.github.io/p/playlist-console/</link><pubDate>Fri, 17 Mar 2023 00:00:00 +0000</pubDate><guid>https://icebluehalls.github.io/p/playlist-console/</guid><description>&lt;img src="https://icebluehalls.github.io/p/playlist-console/title.png" alt="Featured image of post 콘솔 게임 한줄평" />&lt;p>총 117개&lt;/p>
+&lt;p>좌반구와 우반구의 명령을 공유하는 고속도로 역할&lt;/p></description></item><item><title>콘솔 게임 한줄평</title><link>https://icebluehalls.github.io/p/playlist-console/</link><pubDate>Fri, 17 Mar 2023 00:00:00 +0000</pubDate><guid>https://icebluehalls.github.io/p/playlist-console/</guid><description>&lt;img src="https://icebluehalls.github.io/p/playlist-console/title.png" alt="Featured image of post 콘솔 게임 한줄평" />&lt;p>총 117개&lt;/p>
 &lt;h2 id="2023">2023&lt;/h2>
 &lt;p>DJMax Respect V&lt;/p>
 &lt;ul>

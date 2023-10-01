@@ -7,10 +7,10 @@
 깃허브 폴더로 전부 이동이 완료되었다면 이제는 휴고 블로그의 테마를 설치해볼 예정입니다.</p><p>다음 명령어로 내블로그에 서브모듈로 테마 블로그를 설치합니다.</p><p>git submodle add {git 주소} themes/{테마 이름}</p><p>git submodule add <a class=link href=https://github.com/CaiJimmy/hugo-theme-stack.git target=_blank rel=noopener>https://github.com/CaiJimmy/hugo-theme-stack.git</a> themes/stack</p><p>그러면 gitmodules 파일에 명령어로 입력한 서브 모듈 깃주소가 등록됩니다.</p><p>간혹 자동으로 등록이 안되는데 이때에는 수동으로 등록합니다.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
 </span><span class=lnt>2
 </span><span class=lnt>3
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-v data-lang=v><span class=line><span class=cl><span class=p>[</span><span class=na>submodule</span> <span class=p>&#34;</span><span class=s2>themes/stack&#34;</span><span class=p>]</span>
-</span></span><span class=line><span class=cl>    <span class=nv>path</span> <span class=o>=</span> <span class=nv>themes</span><span class=o>/</span><span class=nv>stack</span>
-</span></span><span class=line><span class=cl>    <span class=nv>url</span> <span class=o>=</span> <span class=nv>https</span><span class=p>:</span><span class=c1>//github.com/CaiJimmy/hugo-theme-stack.git
-</span></span></span></code></pre></td></tr></table></div></div><p>![11.PNG]
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>[submodule &#34;themes/stack&#34;]
+</span></span><span class=line><span class=cl>    path = themes/stack
+</span></span><span class=line><span class=cl>    url = https://github.com/CaiJimmy/hugo-theme-stack.git
+</span></span></code></pre></td></tr></table></div></div><p>![11.PNG]
 설치가 완료되면 themes 폴더에 서브 모듈로 등록한 폴더가 나오는데 안으로 들어가서 예제 코드들을 들고올 것입니다.</p><p>cotent 폴더와 config.yml을 복사합니다.</p><p>![12.PNG]
 myBlog 폴더에 붙여넣습니다.</p><p>![13.PNG]
 기존 myblog에 존재하던 config.toml은 삭제합니다.
